@@ -192,6 +192,17 @@ label {
 
 }
 
+@media (max-width: 1536px){
+	.prayerTimes-container {
+		left: -8rem;
+	}
+
+	.cityDate-container {
+		left: -8rem;
+	}
+
+}
+
 @media (max-width: 1200px){
 	label {
 		display: inline-block;
@@ -200,7 +211,7 @@ label {
 	.citiesList {
 		top: 12rem;
 		right: 4rem;
-	}
+	}	
 }
 
 @media (max-width: 1024px){
@@ -209,14 +220,9 @@ label {
 		font-size: 50%;
 	}
 
-	.prayerTimes-container {
-		left: -10rem
-	}
-
 	.cityDate-container {
-		max-width: 20%;
 		padding-bottom: 5rem;
-		left: -15rem
+		max-width: 20%;
 	}
 }
 
@@ -225,84 +231,81 @@ label {
 		font-size: 43.75%;
 	}
 
+	.prayerTimes-container {
+		padding-top: 5rem;
+	}
+
 	.cityDate-container {
-		padding-bottom: 5rem;
+		padding-bottom: 0;
 	}
 }
 
 @media (max-width: 768px){
-	html {
-		font-size: 37.5%;
-	}
-
 	.prayerTimes-container {
 		left: -5rem;
 	}
 
 	.cityDate-container {
-		padding-bottom: 5rem;
-		left: -10rem;			
+		left: -7rem;
+	}
+
+	#cityName {
+		font-size: 5rem;
+	}
+
+	#day {
+		font-size: 2.8rem;
 	}
 
 }
 
-@media (max-width: 660px){
+@media (max-width: 600px){
 	html {
-		font-size: 31.25%;
+		font-size: 37.5%;
 	}
-
-	.prayerTimes-container {
-		padding-bottom: 10rem;
-	}
-
-	.cityDate-container {
-		padding-bottom: 15rem;	
-	}
-
-}
-
-@media (max-width: 560px){
 
 	.cityDate-container {
 		left: -5rem;			
 	}
 }
 
-@media (max-width: 470px){
+@media (max-width: 515px){
+	html {
+		font-size: 35%;
+	}
+
+	.prayerTimes-container{
+		padding-bottom: 8rem;
+		left: -3rem;
+	}
+
 	.cityDate-container {
 		left: 0;
+		padding-bottom: 10rem;
 	}
 
 	#day {
-		font-size: 2.5rem;
+		font-size: 2.4rem;
 	}
+}
+
+@media (max-width: 440px){
+	html {
+		font-size: 33%;
+	}
+
+	.cityDate-container {
+		max-width: 15%;
+	}		
 }
 
 @media (max-width: 380px){
 	html {
-		font-size: 20%;
+		font-size: 31.25%;
 	}
 
-	.prayerTimes-container {
-		padding-bottom: 25rem;
-	}
 	.cityDate-container {
-		max-width: 15%;
-		padding-bottom: 30rem;
-		left: -5rem;
-	}		
-
-	.countriesList {
-		top: 15rem;
-	}
-
-	.citiesList {
-		top: 25rem;
-		right: 4rem;
-	}
-
-	#day {
-		font-size: 3rem;
+		left: 3rem;
 	}
 }
 
