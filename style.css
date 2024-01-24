@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;500;600;700&display=swap');
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--bg-color: rgba(36, 129, 75, .8);
+	--first-text-color:  rgba(199, 247, 219, 0.8);
+	--second-text-color: rgba(230, 230, 230, .8);
+}
+
+html {
+	font-size: 62.5%;
+
+}
+
+body {
+	font-family: 'Reem Kufi', sans-serif;
+	background: url("background/mosque4.jpg") center/cover no-repeat;
+    position: relative;
+}
+
+.container {
+    height: 100vh;
+	max-width: 100%;
+	display: flex;
+	justify-content:space-evenly;
+	align-items: center;
+	text-align: center;	
+	z-index: 1;
+	padding: 0 1rem;
+}
+
+.container::before {
+	content: "";
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    z-index: -1; 
+}
+
+.prayerTimes-container {
+	position: relative;
+	color: var(--first-text-color);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 2rem;
+	left: -15rem
+}
+.prayer {
+	background-color: var(--bg-color);
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-bottom: 1rem;
+	padding: 2rem 1rem;
+	width: 20rem;
+	border-radius: 5rem;
+	transition: .7s;
+}
+
+.prayer:hover {
+	transform: scale(1.1);
+	background-color: rgba(36, 129, 75, .9);
+}
+
+.prayerTime, .prayerName {
+	font-size: 2rem;
+}
+
+.prayerTime {
+	direction: rtl;
+}
+
+.icon {
+	font-size: 4rem;
+
+}
+
+.Fajr-icon, .Maghrib-icon {
+	color: #c2bfbf;
+}
+
+.Shuruq-icon {
+	color: #ffeea3;
+}
+
+.Dhuhr-icon {
+	color: #f7c81d
+}
+
+.Asr-icon {
+	color: #cfb955;
+
+}
+
+.Isha-icon {
+	color: #858585;
+}
+
+.cityDate-container {
+	position: relative;
+	left: -20rem;
+	top: -2rem;
+	width: 15%;
+	color: var(--second-text-color);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#cityName {
+    font-weight: 700;
+    font-size: 8rem;
+}
+
+#day {
+	font-size: 3rem;
+    font-weight: 800;
+	margin: 1rem 0;
+}
+
+
+.list {
+	direction: rtl;
+}
+
+.countriesList {
+	position: absolute;
+	top: 2rem;
+	right: 5rem;
+}
+
+.citiesList {
+	position: absolute;
+    top: 2rem;
+    right: 30rem;
+}
+
+
+label {
+	font-size: 2.5rem; 
+	font-weight: 600;
+	color: var(--second-text-color);
+	padding-bottom: .5rem;
+	display: block; 
+	text-align: center;
+}
+
+#countryInput, #cityInput {
+	width: 20rem;
+	border-radius: 1.5rem;
+	border: .1rem solid #cccccc; 
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	outline: none;
+	font-size: 2.5rem;
+	font-family: 'Reem Kufi', sans-serif;
+	background: transparent;
+	text-align: center;
+	padding: .3rem;
+}
+
+.footer {
+	color: var(--second-text-color);
+	position: absolute;
+    bottom: 1rem;
+    left: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+@media (max-width: 1280px){
+	html {
+		font-size: 56.25%;
+	}
+
+	.container {
+		justify-content: space-around;
+
+	}
+
+	.prayerTimes-container {
+		padding-top: 0;
+	}
+
+}
+
+@media (max-width: 1200px){
+	label {
+		display: inline-block;
+		margin-left: 1rem;
+	}
+	.citiesList {
+		top: 12rem;
+		right: 4rem;
+	}
+}
+
+@media (max-width: 1024px){
+
+	html {
+		font-size: 50%;
+	}
+
+	.prayerTimes-container {
+		left: -10rem
+	}
+
+	.cityDate-container {
+		max-width: 20%;
+		padding-bottom: 5rem;
+		left: -15rem
+	}
+}
+
+@media (max-width: 880px){
+	html {
+		font-size: 43.75%;
+	}
+
+	.cityDate-container {
+		padding-bottom: 5rem;
+	}
+}
+
+@media (max-width: 768px){
+	html {
+		font-size: 37.5%;
+	}
+
+	.prayerTimes-container {
+		left: -5rem;
+	}
+
+	.cityDate-container {
+		padding-bottom: 5rem;
+		left: -10rem;			
+	}
+
+}
+
+@media (max-width: 660px){
+	html {
+		font-size: 31.25%;
+	}
+
+	.prayerTimes-container {
+		padding-bottom: 10rem;
+	}
+
+	.cityDate-container {
+		padding-bottom: 15rem;	
+	}
+
+}
+
+@media (max-width: 560px){
+
+	.cityDate-container {
+		left: -5rem;			
+	}
+}
+
+@media (max-width: 470px){
+	.cityDate-container {
+		left: 0;
+	}
+
+	#day {
+		font-size: 2.5rem;
+	}
+}
+
+@media (max-width: 380px){
+	html {
+		font-size: 20%;
+	}
+
+	.prayerTimes-container {
+		padding-bottom: 25rem;
+	}
+	.cityDate-container {
+		max-width: 15%;
+		padding-bottom: 30rem;
+		left: -5rem;
+	}		
+
+	.countriesList {
+		top: 15rem;
+	}
+
+	.citiesList {
+		top: 25rem;
+		right: 4rem;
+	}
+
+	#day {
+		font-size: 3rem;
+	}
+}
+
+
+

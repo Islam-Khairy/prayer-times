@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prayer Times</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.all.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+        </header>
+        <div class="prayerTimes-container">
+            <div class="prayer">
+                <h2 class="prayerTime" id="Fajr">00:00</h2>
+                <h1 class="prayerName">الفجر</h1>
+                <i class='icon Fajr-icon bx bxs-moon'></i>
+            </div>
+            <div class="prayer">
+                <h2 class="prayerTime" id="Shuruq">00:00</h2>
+                <h1 class="prayerName">الشروق</h1>
+                <i class='icon Shuruq-icon bx bxs-sun'></i>
+            </div>
+            <div class="prayer">
+                <h2 class="prayerTime" id="Dhuhr">00:00</h2>
+                <h1 class="prayerName">الظهر</h1>
+                <i class="icon Dhuhr-icon fa-regular fa-sun"></i>        </div>
+            <div class="prayer">
+                <h2 class="prayerTime" id="Asr">00:00</h2>
+                <h1 class="prayerName">العصر</h1>
+                <i class="icon Asr-icon fa-solid fa-cloud-sun"></i>
+            </div>
+            <div class="prayer">
+                <h2 class="prayerTime" id="Maghrib">00:00</h2>
+                <h1 class="prayerName">المغرب</h1>
+                <i class="icon Maghrib-icon fa-solid fa-cloud"></i>
+            </div>
+            <div class="prayer">
+                <h2 class="prayerTime" id="Isha">00:00</h2>
+                <h1 class="prayerName">العشاء</h1>
+                <i class="icon Isha-icon fa-solid fa-cloud-moon"></i>
+            </div>
+        </div>
+    
+        <div class="cityDate-container">
+            <h1 id="cityName"></h1>
+            <h1 id="day"></h1>
+        </div>
+        
+        <div class="list">
+            <div class="citiesList">
+                <label for="cityInput">اختر المدينة:</label>
+                <input list="cityDatalist" id="cityInput" name="cityInput">
+                <datalist id="cityDatalist"></datalist>
+            </div>
+        
+            <div class="countriesList">
+                <label for="countryInput">اختر الدولة:</label>
+                <input list="countryDatalist" id="countryInput" name="countryInput">
+                <datalist id="countryDatalist"></datalist>
+            </div>
+        </div>
+        <footer class="footer"></footer>
+    </div>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
