@@ -976,7 +976,7 @@ function getPrayerTimes(enCityName, enCountryName, selectedCity) {
             return response.json();
         })
         .then(data => {
-            if (data && data.data && data.data.timings) {
+            if (data && data.data.timings) {
                 let prayerTimes = data.data.timings;
                 let date = data.data.date;
 
@@ -1012,38 +1012,24 @@ function getPrayerTimes(enCityName, enCountryName, selectedCity) {
                 Swal.fire({
                     title: 'عذراً',
                     text: '.مواقيت الصلاة غير متوفرة لهذه المنطقة',
-                    customClass: {
-                        popup: 'error-message'
-                    }
                 });
             }
         })
         .catch(error => {
-            if (error.message === 'Failed to fetch') {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'خطأ',
-                    text: 'يرجى التحقق من اتصالك بالإنترنت',
-                    customClass: {
-                        popup: 'error-message'
-                    }
-                });
-            } else {
-                Swal.fire({
-                    title: 'عذراً',
-                    text: '.مواقيت الصلاة غير متوفرة لهذه المنطقة',
-                    customClass: {
-                        popup: 'error-message'
-                    }
-                });
-            }
+            Swal.fire({
+                icon: 'error',
+                title: 'خطأ',
+                text: 'يرجى التحقق من اتصالك بالإنترنت',
+                customClass: {
+                    popup: 'error-message'
+                }
+            });
 
             if (lastExistCity) {
                 cityText.textContent = lastExistCity;
             }
         });
 }
-
 
 function convertTo12HourFormat(hours24) {
     const [hours, minutes] = hours24.split(':').map(Number);
@@ -1063,5 +1049,4 @@ strings: ['Generated with ❤️ by Islam Khairy'],
 typeSpeed: 100,
 backSpeed: 100,
 backDelay: 2000,
-loop: true
 });
