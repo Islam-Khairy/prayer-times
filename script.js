@@ -1016,14 +1016,21 @@ function getPrayerTimes(enCityName, enCountryName, selectedCity) {
             }
         })
         .catch(error => {
-            Swal.fire({
-                icon: 'error',
-                title: 'خطأ',
-                text: 'يرجى التحقق من اتصالك بالإنترنت',
-                customClass: {
-                    popup: 'error-message'
-                }
-            });
+            if (error.message === 'Failed to fetch') {
+                Swal.fire({
+                    icon:  'error',
+                    title: 'خطأ',
+                    text: 'يرجى التحقق من اتصالك بالإنترنت',
+                    customClass: {
+                        popup: 'error-message'
+                    }
+                });
+            } else {
+                Swal.fire({
+                    title: 'عذراً',
+                    text: 'المدينة أو الدولة المحددة غير معروفة',
+                });
+            }
 
             if (lastExistCity) {
                 cityText.textContent = lastExistCity;
@@ -1049,4 +1056,5 @@ strings: ['Generated with ❤️ by Islam Khairy'],
 typeSpeed: 100,
 backSpeed: 100,
 backDelay: 2000,
+loop: true
 });
