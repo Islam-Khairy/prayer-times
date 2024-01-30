@@ -966,7 +966,7 @@ function fillPrayerTimes(id, time) {
 }
 
 function getPrayerTimes(enCityName, enCountryName, selectedCity) {
-    const url = `http://api.aladhan.com/v1/timingsByCity?city=${encodeURIComponent(enCityName)}&country=${encodeURIComponent(enCountryName)}&method=8`;
+    const url = `https://api.aladhan.com/v1/timingsByCity?city=${encodeURIComponent(enCityName)}&country=${encodeURIComponent(enCountryName)}&method=8`;
 
     fetch(url)
         .then(response => {
@@ -976,7 +976,7 @@ function getPrayerTimes(enCityName, enCountryName, selectedCity) {
             return response.json();
         })
         .then(data => {
-            if (data && data.data.timings) {
+            if (data && data.data && data.data.timings) {
                 let prayerTimes = data.data.timings;
                 let date = data.data.date;
 
@@ -1012,23 +1012,26 @@ function getPrayerTimes(enCityName, enCountryName, selectedCity) {
                 Swal.fire({
                     title: 'عذراً',
                     text: '.مواقيت الصلاة غير متوفرة لهذه المنطقة',
+                    customClass: {
+                        popup: 'error-message'
+                    }
                 });
             }
         })
         .catch(error => {
             if (error.message === 'Failed to fetch') {
                 Swal.fire({
-                    icon:  'error',
+                    icon: 'error',
                     title: 'خطأ',
                     text: 'يرجى التحقق من اتصالك بالإنترنت',
-                    customClass: {
-                        popup: 'error-message'
-                    }
                 });
             } else {
                 Swal.fire({
                     title: 'عذراً',
-                    text: 'المدينة أو الدولة المحددة غير معروفة',
+                    text: '.مواقيت الصلاة غير متوفرة لهذه المنطقة',
+                    customClass: {
+                        popup: 'error-message'
+                    }
                 });
             }
 
@@ -1037,6 +1040,7 @@ function getPrayerTimes(enCityName, enCountryName, selectedCity) {
             }
         });
 }
+
 
 function convertTo12HourFormat(hours24) {
     const [hours, minutes] = hours24.split(':').map(Number);

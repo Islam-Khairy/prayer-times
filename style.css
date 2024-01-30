@@ -179,7 +179,7 @@ label {
 }
 
 .error-message {
-	font-family: Amiri;
+	font-family: Amiri !important;
 }
 
 
