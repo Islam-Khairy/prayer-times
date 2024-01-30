@@ -4,16 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prayer Times</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.all.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 </head>
 <body>
     <div class="container">
-        <header class="header">
-        </header>
         <div class="prayerTimes-container">
             <div class="prayer">
                 <h2 class="prayerTime" id="Fajr">00:00</h2>
@@ -48,25 +47,27 @@
     
         <div class="cityDate-container">
             <h1 id="cityName"></h1>
-            <h1 id="day"></h1>
+            <h3 id="day"></h3>
+            <h3 class="date" id="gregorian"></h3>
+            <h3 class="date" id="hijri"></h3>
         </div>
         
         <div class="list">
             <div class="citiesList">
                 <label for="cityInput">اختر المدينة:</label>
-                <input list="cityDatalist" id="cityInput" name="cityInput">
-                <datalist id="cityDatalist"></datalist>
+                <input list="cityDataList" id="cityInput" name="cityInput">
+                <datalist id="cityDataList"></datalist>
             </div>
         
             <div class="countriesList">
                 <label for="countryInput">اختر الدولة:</label>
-                <input list="countryDatalist" id="countryInput" name="countryInput">
-                <datalist id="countryDatalist"></datalist>
+                <input list="countryDataList" id="countryInput" name="countryInput">
+                <datalist id="countryDataList"></datalist>
             </div>
         </div>
+        
         <footer class="footer"></footer>
     </div>
-<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

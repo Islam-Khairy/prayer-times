@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ruwudu:wght@400;500;600;700&family=Scheherazade+New:wght@400;500;600;700&display=swap');
 
 *{
 	padding: 0;
@@ -24,12 +26,12 @@ body {
 }
 
 .container {
-    height: 100vh;
+    min-height: 100vh;
 	max-width: 100%;
 	display: flex;
 	justify-content:space-evenly;
 	align-items: center;
-	text-align: center;	
+	text-align: center;
 	z-index: 1;
 	padding: 0 1rem;
 }
@@ -51,8 +53,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding-top: 2rem;
-	left: -15rem
+	left: 5rem;
+	top: 0;
 }
 .prayer {
 	background-color: var(--bg-color);
@@ -106,25 +108,34 @@ body {
 }
 
 .cityDate-container {
+	font-family:ruwudu;
 	position: relative;
-	left: -20rem;
-	top: -2rem;
-	width: 15%;
+	left: -5rem;
 	color: var(--second-text-color);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	width: 25%;
 }
 
 #cityName {
     font-weight: 700;
-    font-size: 8rem;
+    font-size: 6rem;
+	margin-bottom: 1rem;
 }
 
 #day {
-	font-size: 3rem;
+	font-size: 5rem;
     font-weight: 800;
-	margin: 1rem 0;
+	letter-spacing: 0.2rem;	
+}
+
+.date {
+	direction: rtl;
+	font-size: 2.5rem;
+    font-weight: 700;
+	margin-top: 1.5rem;
+	letter-spacing: 0.1rem;
 }
 
 
@@ -167,6 +178,11 @@ label {
 	padding: .3rem;
 }
 
+.error-message {
+	font-family: Amiri !important;
+}
+
+
 .footer {
 	color: var(--second-text-color);
 	position: absolute;
@@ -176,138 +192,112 @@ label {
     font-weight: 600;
 }
 
-@media (max-width: 1280px){
+@media (max-width: 1024px){
 	html {
 		font-size: 56.25%;
 	}
 
-	.container {
-		justify-content: space-around;
-
-	}
-
-	.prayerTimes-container {
-		padding-top: 0;
-	}
-
-}
-
-@media (max-width: 1536px){
-	.prayerTimes-container {
-		left: -8rem;
-	}
-
 	.cityDate-container {
-		left: -8rem;
+		top: -2rem;
+		left: 0;
 	}
-
-}
-
-@media (max-width: 1200px){
+	
 	label {
 		display: inline-block;
-		margin-left: 1rem;
+		margin: 2rem;
 	}
+
 	.citiesList {
-		top: 12rem;
+		top: 10rem;
 		right: 4rem;
-	}	
-}
-
-@media (max-width: 1024px){
-
-	html {
-		font-size: 50%;
-	}
-
-	.cityDate-container {
-		padding-bottom: 5rem;
-		max-width: 20%;
 	}
 }
 
-@media (max-width: 880px){
-	html {
-		font-size: 43.75%;
-	}
-
+@media (max-width: 992px){
 	.prayerTimes-container {
-		padding-top: 5rem;
+		top: -10rem;
+		left: 5rem;		
 	}
 
 	.cityDate-container {
-		padding-bottom: 0;
+		top: -12rem;
+		left: 5rem;
 	}
+
 }
 
 @media (max-width: 768px){
 	.prayerTimes-container {
-		left: -5rem;
+		top: -8rem;
+		left: 5rem;		
 	}
 
 	.cityDate-container {
-		left: -7rem;
+		top: -10rem;
+		left: 5rem;
 	}
-
-	#cityName {
-		font-size: 5rem;
-	}
-
-	#day {
-		font-size: 2.8rem;
-	}
-
 }
 
-@media (max-width: 600px){
+@media (min-width: 540px) and (max-width: 575.98px){
+	html{
+		font-size: 43.75%;
+	}
+
+	.prayerTimes-container {
+		top: -6rem;
+		left: 3rem;
+	}
+
+	.cityDate-container {
+		left: 5rem;
+	}
+}
+
+@media (max-width: 450px){
+	html{
+		font-size: 43.75%;
+	}
+
+	.prayerTimes-container {
+		top: -10rem;
+		left: -1rem;		
+	}
+
+	.cityDate-container {
+		top: -12rem;
+		left: 5rem;
+	}
+
+	label {
+		margin-right: -1rem;
+	}
+}
+
+@media (max-width: 390px){
 	html {
 		font-size: 37.5%;
 	}
 
-	.cityDate-container {
-		left: -5rem;			
-	}
-}
-
-@media (max-width: 515px){
-	html {
-		font-size: 35%;
-	}
-
-	.prayerTimes-container{
-		padding-bottom: 8rem;
-		left: -3rem;
+	.prayerTimes-container {
+		top: -8rem;
 	}
 
 	.cityDate-container {
-		left: 0;
-		padding-bottom: 10rem;
-	}
-
-	#day {
-		font-size: 2.4rem;
+		top: -10rem;
 	}
 }
 
-@media (max-width: 440px){
-	html {
-		font-size: 33%;
-	}
-
-	.cityDate-container {
-		max-width: 15%;
-	}		
-}
-
-@media (max-width: 380px){
+@media (max-width: 320px) {
 	html {
 		font-size: 31.25%;
 	}
-
-	.cityDate-container {
-		left: 3rem;
+	.prayerTimes-container {
+		left: 1rem;
 	}
 }
 
-
-
+@media (max-width: 280px){
+	html{
+		font-size: 25%;
+	}
+}
