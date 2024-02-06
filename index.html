@@ -13,16 +13,17 @@
 </head>
 <body>
     <div class="container">
-        <div class="prayerTimes-container">
+        <div id="spinner"></div>
+        <div id="prayerTimes-container" class="prayerTimes-container">
             <div class="prayer">
                 <h2 class="prayerTime" id="Fajr">00:00</h2>
                 <h1 class="prayerName">الفجر</h1>
                 <i class='icon Fajr-icon bx bxs-moon'></i>
             </div>
             <div class="prayer">
-                <h2 class="prayerTime" id="Shuruq">00:00</h2>
+                <h2 class="prayerTime" id="Sunrise">00:00</h2>
                 <h1 class="prayerName">الشروق</h1>
-                <i class='icon Shuruq-icon bx bxs-sun'></i>
+                <i class='icon Sunrise-icon bx bxs-sun'></i>
             </div>
             <div class="prayer">
                 <h2 class="prayerTime" id="Dhuhr">00:00</h2>
@@ -58,14 +59,12 @@
                 <input list="cityDataList" id="cityInput" name="cityInput">
                 <datalist id="cityDataList"></datalist>
             </div>
-        
-            <div class="countriesList">
+                    <div class="countriesList">
                 <label for="countryInput">اختر الدولة:</label>
                 <input list="countryDataList" id="countryInput" name="countryInput">
                 <datalist id="countryDataList"></datalist>
             </div>
         </div>
-        
         <footer class="footer"></footer>
     </div>
 <script src="script.js"></script>
