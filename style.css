@@ -27,17 +27,18 @@ body {
 
 .container {
     height: 100vh;
-	max-width: 100%;
-	display: flex;
-	justify-content:space-evenly;
-	align-items: center;
-	text-align: center;
-	z-index: 1;
-	padding: 0 1rem;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+    padding: 0 1rem;
+    margin-top: auto;
 }
 
 .container::before {
-	content: "";
+    content: "";
     background: rgba(0, 0, 0, 0.3);
     position: absolute;
     top: 0;
@@ -53,9 +54,9 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	left: 5rem;
-	top: 0;
+	left: 2rem;
 }
+
 .prayer {
 	background-color: var(--bg-color);
 	display: flex;
@@ -110,7 +111,7 @@ body {
 .cityDate-container {
 	font-family:ruwudu;
 	position: relative;
-	left: -5rem;
+	left: -12rem;
 	color: var(--second-text-color);
 	display: flex;
 	flex-direction: column;
@@ -137,7 +138,6 @@ body {
 	margin-top: 1.5rem;
 	letter-spacing: 0.1rem;
 }
-
 
 .list {
 	direction: rtl;
@@ -200,14 +200,14 @@ label {
     100% { transform: rotate(360deg); }
 }
 
-
 .footer {
-	color: var(--second-text-color);
-	position: absolute;
+    color: var(--second-text-color);
+    position: absolute;
     bottom: 1rem;
     left: 2rem;
     font-size: 2rem;
     font-weight: 600;
+    margin-top: auto;
 }
 
 @media (max-width: 1024px){
@@ -217,7 +217,7 @@ label {
 
 	.cityDate-container {
 		top: -2rem;
-		left: 0;
+		left: -6rem;
 	}
 	
 	label {
@@ -277,13 +277,13 @@ label {
 	}
 
 	.prayerTimes-container {
-		top: -10rem;
+		top: -7rem;
 		left: -1rem;		
 	}
 
 	.cityDate-container {
-		top: -12rem;
-		left: 5rem;
+		top: -9rem;
+		left: 4rem;
 	}
 
 	label {
@@ -316,6 +316,6 @@ label {
 
 @media (max-width: 280px){
 	html{
-		font-size: 25%;
+		font-size: 28%;
 	}
 }

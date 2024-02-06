@@ -1450,16 +1450,18 @@ function updateUI(date, selectedCity) {
     const numericMonth = parseInt(date.gregorian.month.number, 10);
     const arabicMonth = arabicMonths[numericMonth];
     const gregorianParts = date.gregorian.date.split('-');
-    gregorianDate.textContent = `${gregorianParts[0]} ${arabicMonth} ${gregorianParts[2]}`;
+    const gregorianDay = gregorianParts[0].replace(/^0+/, '');
+    gregorianDate.textContent = `${gregorianDay} ${arabicMonth} ${gregorianParts[2]}`;
 
     const hijriDate = document.getElementById("hijri");
     let hijriDay = date.hijri.day;
     let hijriMonth = date.hijri.month.ar;
     let hijriYear = date.hijri.year;
+    hijriDay = hijriDay.replace(/^0+/, '');
     if (hijriDay === 1) {
         hijriDate.style.display = "none";
     }
-    hijriDay--;
+    hijriDay--;    
     hijriDate.textContent = `${hijriDay} ${hijriMonth} ${hijriYear}`;
 
     if (selectedCity) {
@@ -1615,5 +1617,7 @@ strings: ['Generated with ❤️ by Islam Khairy'],
 typeSpeed: 100,
 backSpeed: 100,
 backDelay: 2000,
-loop: true
+loop: true,
 });
+
+typed.cursor.style.display = 'none';
