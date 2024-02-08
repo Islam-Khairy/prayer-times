@@ -247,13 +247,13 @@ label {
 
 @media (max-width: 768px){
 	.prayerTimes-container {
-		top: -8rem;
-		left: 5rem;		
+		top: 0;
+		left: 0;		
 	}
 
 	.cityDate-container {
-		top: -10rem;
-		left: 5rem;
+		top: -3rem;
+		left: 0;
 	}
 }
 
@@ -263,12 +263,13 @@ label {
 	}
 
 	.prayerTimes-container {
-		top: -6rem;
-		left: 3rem;
+		top: -5rem;
+		left: 2rem;
 	}
 
 	.cityDate-container {
-		left: 5rem;
+		top: -6rem;
+		left: 2rem;
 	}
 }
 
@@ -278,13 +279,13 @@ label {
 	}
 
 	.prayerTimes-container {
-		top: -7rem;
-		left: -1rem;		
+		top: -8rem;
+		left: -2rem;		
 	}
 
 	.cityDate-container {
-		top: -9rem;
-		left: 4rem;
+		top: -10rem;
+		left: 2rem;
 	}
 
 	label {
@@ -296,27 +297,10 @@ label {
 	html {
 		font-size: 37.5%;
 	}
-
-	.prayerTimes-container {
-		top: -8rem;
-	}
-
-	.cityDate-container {
-		top: -10rem;
-	}
 }
 
 @media (max-width: 320px) {
 	html {
-		font-size: 31.25%;
-	}
-	.prayerTimes-container {
-		left: 1rem;
-	}
-}
-
-@media (max-width: 280px){
-	html{
 		font-size: 28%;
 	}
 }

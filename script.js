@@ -38,20 +38,20 @@ let countries = [
     ]
 },    
 {
-    country: {countryName: "السعودية", enCountryName: "Saudi Arabia"},
+    country: {countryName: "السعودية", enCountryName: "Saudi-Arabia"},
     cities: [
         { cityName: "الرياض", enCityName: "Riyadh" },
         { cityName: "جدة", enCityName: "Jeddah" },
-        { cityName: "مكة المكرمة", enCityName: "Mecca" },
-        { cityName: "المدينة المنورة", enCityName: "Medina" },
+        { cityName: "مكة المكرمة", enCityName: "Makkah" },
+        { cityName: "المدينة المنورة", enCityName: "Madina" },
         { cityName: "الدمام", enCityName: "Dammam" },
         { cityName: "بريدة", enCityName: "Buraydah" },
         { cityName: "تبوك", enCityName: "Tabuk" },
         { cityName: "الاحساء", enCityName: "Al-Ahsa" },
         { cityName: "الطائف", enCityName: "Taif" },
         { cityName: "خميس مشيط", enCityName: "Khamis Mushait" },
-        { cityName: "حائل", enCityName: "Hail" },
-        { cityName: "نجران", enCityName: "Najran" },
+        { cityName: "حائل", enCityName: "Hayil" },
+        { cityName: "نجران", enCityName: "Nejraan" },
         { cityName: "جازان", enCityName: "Jazan" },
         { cityName: "القصيم", enCityName: "Qasim" },
         { cityName: "الباحة", enCityName: "Al Bahah" },
@@ -61,51 +61,43 @@ let countries = [
         { cityName: "الخبر", enCityName: "Khobar" },
         { cityName: "حفر الباطن", enCityName: "Hafar Al-Batin" },
         { cityName: "ضباء", enCityName: "Duba" },
-        { cityName: "رياض الخبراء", enCityName: "Riyadh Al Khabra" },
-        { cityName: "تمير", enCityName: "Tumair" },
+        { cityName: "رياض الخبراء", enCityName: "Riyad Al Khabra" },
+        { cityName: "تمير", enCityName: "Tumayr" },
         { cityName: "العيينة", enCityName: "Al Uyaynah" },
-        { cityName: "الشنان", enCityName: "Shunan" },
         { cityName: "أملج", enCityName: "Umluj" },
-        { cityName: "مشهد", enCityName: "Mashhad" },
-        { cityName: "القنفذة", enCityName: "Qunfudhah" },
+        { cityName: "القنفذة", enCityName: "Alqunfudhah" },
         { cityName: "الوجه", enCityName: "Al Wajh" },
-        { cityName: "الفيصلية", enCityName: "Al Faysaliyah" },
+        { cityName: "الفيصلية", enCityName: "Al Faisaliyah" },
         { cityName: "بدر", enCityName: "Badr" },
-        { cityName: "ضرما", enCityName: "Dhurma" },
+        { cityName: "ضرما", enCityName: "Durma" },
         { cityName: "حريملاء", enCityName: "Huraymila" },
         { cityName: "عنك", enCityName: "Ank" },
-        { cityName: "ميسان", enCityName: "Maysan" },
         { cityName: "رفحاء", enCityName: "Rafha" },
         { cityName: "حقل", enCityName: "Haql" },
-        { cityName: "خليص", enCityName: "Khulais" },
+        { cityName: "خليص", enCityName: "Khulays" },
         { cityName: "بقيق", enCityName: "Buqayq" },
         { cityName: "الزلفي", enCityName: "Zulfi" },
         { cityName: "الخرج", enCityName: "Al-Kharj" },
         { cityName: "الظهران", enCityName: "Dhahran" },
-        { cityName: "عنيزة", enCityName: "Onaizah" },
+        { cityName: "عنيزة", enCityName: "Unayzah" },
         { cityName: "سكاكا", enCityName: "Sakaka" },
-        { cityName: "الجموم", enCityName: "Al Jumum" },
+        { cityName: "الجموم", enCityName: "Jumum" },
         { cityName: "العلا", enCityName: "Al Ula" },
         { cityName: "وادي الدواسر", enCityName: "Wadi Al Dawasir" },
         { cityName: "الخفجي", enCityName: "Al Khafji" },
         { cityName: "صبيا", enCityName: "Sabya" },
         { cityName: "الأفلاج", enCityName: "Al Aflaj" },
         { cityName: "بيشة", enCityName: "Bisha" },
-        { cityName: "سيهات", enCityName: "Sihat" },
+        { cityName: "سيهات", enCityName: "Saihat" },
         { cityName: "تاروت", enCityName: "Tarout" },
         { cityName: "الدرعية", enCityName: "Diriyah" },
-        { cityName: "الملك فهد", enCityName: "King Fahd" },
         { cityName: "خيبر", enCityName: "Khaybar" },
         { cityName: "بلجرشي", enCityName: "Baljurashi" },
         { cityName: "القريات", enCityName: "Al Qurayyat" },
         { cityName: "عفيف", enCityName: "Afif" },
         { cityName: "بحرة", enCityName: "Bahrah" },
         { cityName: "ساجر", enCityName: "Sajir" },
-        { cityName: "المظيلف", enCityName: "Al Muzahimiyah" },
-        { cityName: "المندق", enCityName: "Al Mandaq" },
-        { cityName: "قرية العليا", enCityName: "Al Olaya Village" },
-        { cityName: "ضريب", enCityName: "Dhurayb" },
-        
+        { cityName: "المزاحمية", enCityName: "Al Muzahimiyah" },        
     ]
 },
 {
@@ -1266,7 +1258,7 @@ let countries = [
 },
 ];
 
-const arabicMonths = {
+const monthsArabicNames = {
     1: "يناير",
     2: "فبراير",
     3: "مارس",
@@ -1284,7 +1276,7 @@ const arabicMonths = {
 function getAdjustments(enCountryName, enCityName) { 
     const countryAdjustments = {
         "Egypt": { "Asr": 1, "Isha": -10 },
-        "Saudi Arabia": { "Asr": 2,"Fajr": 5 },
+        "Saudi-Arabia": { "Asr": 1,"Fajr": 5 },
         "Yemen": { "Fajr": 5 },
         "Oman": { "Fajr": 5 },
         "United Arab Emirates": { "Fajr": 5 },
@@ -1332,7 +1324,7 @@ function getAdjustments(enCountryName, enCityName) {
         "Bosnia and Herzegovina": { "Fajr": 8, "Asr": 2, "Isha": 3 },
     };
 
-    const citySpecificAdjustments = {
+    const ccityAdjustments = {
         "Egypt": {
             "Cairo": { "Fajr": 1, "Sunrise": 0, "Isha": -1 },
             "Fayoum": { "Fajr": 1, "Sunrise": 1, "Dhuhr": 1, "Isha": -1 },
@@ -1354,13 +1346,33 @@ function getAdjustments(enCountryName, enCityName) {
             "Shamal Sina": { "Fajr": 1, "Sunrise": 1, "Dhuhr": -1, "Asr": -3, "Maghrib": -3, "Isha": -2 },
             "South Sinai": { "Sunrise": -1, "Maghrib": -1, "Isha": -2 },
         },
-        "Saudi Arabia": {    
-            "Al-Ahsa": { "Fajr": 6, "Sunrise": 8, "Dhuhr": 4, "Asr": -1, "Maghrib": -1, "Isha": -1 },
-            "Hail": { "Fajr": -5, "Sunrise": -5, "Dhuhr": -3, "Asr": -4, "Maghrib": -2, "Isha": -2 },
-            "Najran": { "Fajr": 4, "Sunrise": 4, "Dhuhr": 6, "Asr": 5, "Maghrib": 7, "Isha": 7 },
-            "Qasim": { "Fajr": -3, "Sunrise": -3, "Dhuhr": -2, "Asr": -3, "Maghrib": -2, "Isha": -2 },
-            "Riyadh Al Khabra": { "Fajr": -5, "Sunrise": -6, "Dhuhr": -4, "Asr": -6, "Maghrib": -5, "Isha": -5 },
-            "Tumair": { "Fajr": -4, "Sunrise": -2, "Dhuhr": -3, "Asr": -5, "Maghrib": -4, "Isha": -4 },
+        "Saudi-Arabia": {  
+            "Riyadh": { "Dhuhr": 1, "Maghrib": 1, "Isha": 1 }, 
+            "Jeddah": { "Dhuhr": 1, "Maghrib": 1, "Isha": 1 },
+            "Makkah": { "Fajr": -1, "Sunrise": -1 },
+            "Madina": { "Fajr": -1, "Sunrise": -1, "Asr": 1 },
+            "Dammam": { "Sunrise": -1 },
+            "Buraydah": { "Fajr": -1, "Sunrise": -1, "Dhuhr": 1 },
+            "Tabuk": { "Asr": 1 },
+            "Taif": { "Dhuhr": 1, "Asr": 1 },
+            "Khamis Mushait": { "Fajr": -1, "Dhuhr": 1, "Asr": 1 },
+            "Al-Ahsa": { "Fajr": 6, "Sunrise": 8, "Dhuhr": 4, "Maghrib": -1, "Isha": -1 },
+            "Hayil": { "Dhuhr": 1, "Maghrib": 1, "Isha": 1 },
+            "Nejraan": { "Sunrise": -1, "Dhuhr": 1, "Asr": 1, "Maghrib": 2, "Isha": 2 },
+            "Jazan": { "Sunrise": -1, "Maghrib": 1, "Isha": 1 },
+            "Qasim": { "Fajr": -3, "Sunrise": -3, "Dhuhr": -2, "Asr": -3, "Maghrib": -3, "Isha": -3 },
+            "Al Bahah": { "Sunrise": -1, "Dhuhr": 1, },
+            "Arar": { "Fajr": -1, "Sunrise": -1 },
+            "Yanbu": { "Fajr": -1, "Sunrise": -1, "Maghrib": 1, "Isha": 1 },
+            "Jubail": { "Fajr": -1, "Sunrise": -1 },
+            "Khobar": { "Fajr": -1, "Sunrise": -1, "Dhuhr": 1, "Asr": 1 },
+            "Hafar Al-Batin": { "Fajr": -1, "Sunrise": -1 },
+            "Tumayr": { "Asr": 1, "Maghrib": 1, "Isha": 1 },
+            "Haql": { "Fajr": 2, "Sunrise": 2, "Dhuhr": 3, "Asr": 3, "Maghrib": 2, "Isha": 2 },
+            "Al Faisaliyah": { "Fajr": -5, "Sunrise": -6, "Dhuhr": -4, "Asr": -4, "Maghrib": -4, "Isha": -4 },
+            "Alqunfudhah": { "Sunrise": 10, "Dhuhr": 3, "Asr": -2, "Maghrib": -4, "Isha": -4 },
+            "Al Khafji": { "Fajr": -2, "Sunrise": -2, "Dhuhr": -1, "Asr": -1, "Maghrib": -1, "Isha": -1 },
+            "Khaybar": { "Dhuhr": 2, "Asr": 2, "Maghrib": 2, "Isha": 2 },
         }
     };
 
@@ -1370,8 +1382,8 @@ function getAdjustments(enCountryName, enCityName) {
         Object.assign(adjustments, countryAdjustments[enCountryName]);
     }
 
-    if (enCityName && enCountryName in citySpecificAdjustments && enCityName in citySpecificAdjustments[enCountryName]) {
-        Object.entries(citySpecificAdjustments[enCountryName][enCityName]).forEach(([prayer, adjustment]) => {
+    if (enCityName && enCountryName in ccityAdjustments && enCityName in ccityAdjustments[enCountryName]) {
+        Object.entries(ccityAdjustments[enCountryName][enCityName]).forEach(([prayer, adjustment]) => {
             adjustments[prayer] = (adjustments[prayer] || 0) + adjustment;
         });
     }
@@ -1448,7 +1460,7 @@ function updateUI(date, selectedCity) {
 
     const gregorianDate = document.getElementById("gregorian");
     const numericMonth = parseInt(date.gregorian.month.number, 10);
-    const arabicMonth = arabicMonths[numericMonth];
+    const arabicMonth = monthsArabicNames[numericMonth];
     const gregorianParts = date.gregorian.date.split('-');
     const gregorianDay = gregorianParts[0].replace(/^0+/, '');
     gregorianDate.textContent = `${gregorianDay} ${arabicMonth} ${gregorianParts[2]}`;
