@@ -1324,27 +1324,27 @@ function getAdjustments(enCountryName, enCityName) {
         "Bosnia and Herzegovina": { "Fajr": 8, "Asr": 2, "Isha": 3 },
     };
 
-    const ccityAdjustments = {
+    const citiesAdjustments = {
         "Egypt": {
-            "Cairo": { "Fajr": 1, "Sunrise": 0, "Isha": -1 },
+            "Cairo": { "Dhuhr": 1, "Maghrib": -1, "Isha": -2 },
             "Fayoum": { "Fajr": 1, "Sunrise": 1, "Dhuhr": 1, "Isha": -1 },
-            "Beni Suef": { "Fajr": -1, "Sunrise": -1, "Dhuhr": -1, "Asr": -2, "Maghrib": -2, "Isha": -3 },
-            "Minya": { "Fajr": -2, "Sunrise": -3, "Dhuhr": -2, "Asr": -2, "Maghrib": -2, "Isha": -4 },
-            "Assiut": {"Fajr": 1, "Dhuhr": -1, "Asr": -1, "Maghrib": -1, "Isha": -3},
-            "Sohag": { "Fajr": 1, "Maghrib": -1, "Isha": -4 },
-            "Qena": { "Sunrise": -1, "Asr": -1, "Isha": -4 },
-            "Luxor": { "Dhuhr": 1, "Asr": -1, "Isha": -4 },
-            "Aswan": { "Fajr": 1, "Dhuhr": 1, "Isha": -5 },
-            "New Valley": {"Fajr": -1, "Sunrise": -2, "Dhuhr": -2, "Asr": -2, "Maghrib": -2, "Isha": -6},
-            "Matrouh": { "Fajr": 1, "Asr": -1},
-            "Alexandria": { "Fajr": 1, "Maghrib": -1 },
-            "Beheira": { "Fajr": 2, "Sunrise": 2, "Dhuhr": 1, "Maghrib": -1 },            
-            "Kafr El-Sheikh": { "Fajr": 4, "Sunrise": 4, "Dhuhr": 4, "Asr": 3, "Maghrib": 2, "Isha": 3 },
-            "Dakahlia": { "Sunrise": -1, "Isha": 1 },
-            "Sharqia": { "Fajr": 1, "Sunrise": 1, "Dhuhr": 1, "Isha": 1 },
-            "Suez": { "Fajr": 1, "Isha": -1 },
-            "Shamal Sina": { "Fajr": 1, "Sunrise": 1, "Dhuhr": -1, "Asr": -3, "Maghrib": -3, "Isha": -2 },
-            "South Sinai": { "Sunrise": -1, "Maghrib": -1, "Isha": -2 },
+            "Beni Suef": { "Fajr": -1, "Sunrise": -1, "Dhuhr": -1, "Asr": -1, "Maghrib": -2, "Isha": -4 },
+            "Minya": { "Fajr": -2, "Sunrise": -2, "Dhuhr": -2, "Asr": -2, "Maghrib": -3, "Isha": -5 },
+            "Assiut": {"Fajr": 1, "Asr": -1, "Isha": -4},
+            "Sohag": { "Dhuhr": 1, "Maghrib": -1, "Isha": -4 },
+            "Qena": { "Asr": -1, "Isha": -4 },
+            "Luxor": { "Fajr": 1, "Isha": -5 },
+            "Aswan": { "Fajr": 1, "Isha": -6 },
+            "New Valley": {"Fajr": -1, "Sunrise": -1, "Dhuhr": -1, "Asr": -2, "Maghrib": -2, "Isha": -7},
+            "Matrouh": { "Fajr": -3, "Sunrise": -5, "Dhuhr": -3, "Asr": -1, "Maghrib": -2, "Isha": -4 },
+            "Alexandria": { "Dhuhr": 1, "Maghrib": -1, "Isha": -1 },
+            "Beheira": { "Fajr": 1, "Sunrise": 2, "Dhuhr": 1, "Isha": -1 },            
+            "Kafr El-Sheikh": { "Fajr": 3, "Sunrise": 4, "Dhuhr": 2, "Asr": 1, "Maghrib": 1 },
+            "Dakahlia": { "Dhuhr": 1, "Asr": 1 },
+            "Sharqia": { "Fajr": 1, "Sunrise": 1},
+            "Suez": { "Dhuhr": 1, "Asr": 1, "Isha": -2 },
+            "Shamal Sina": { "Asr": -2, "Maghrib": -2, "Isha": -2 },
+            "South Sinai": { "Maghrib": -1, "Isha": -3 },
         },
         "Saudi-Arabia": {  
             "Riyadh": { "Dhuhr": 1, "Maghrib": 1, "Isha": 1 }, 
@@ -1382,8 +1382,8 @@ function getAdjustments(enCountryName, enCityName) {
         Object.assign(adjustments, countryAdjustments[enCountryName]);
     }
 
-    if (enCityName && enCountryName in ccityAdjustments && enCityName in ccityAdjustments[enCountryName]) {
-        Object.entries(ccityAdjustments[enCountryName][enCityName]).forEach(([prayer, adjustment]) => {
+    if (enCityName && enCountryName in citiesAdjustments && enCityName in citiesAdjustments[enCountryName]) {
+        Object.entries(citiesAdjustments[enCountryName][enCityName]).forEach(([prayer, adjustment]) => {
             adjustments[prayer] = (adjustments[prayer] || 0) + adjustment;
         });
     }
@@ -1470,7 +1470,7 @@ function updateUI(date, selectedCity) {
     let hijriMonth = date.hijri.month.ar;
     let hijriYear = date.hijri.year;
     hijriDay = hijriDay.replace(/^0+/, '');
-    if (hijriDay === 1) {
+    if (hijriDay == 1) {
         hijriDate.style.display = "none";
     }
     hijriDay--;    
