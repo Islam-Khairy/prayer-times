@@ -1467,11 +1467,7 @@ function updateUI(date, selectedCity) {
     let hijriDay = date.hijri.day;
     let hijriMonth = date.hijri.month.ar;
     let hijriYear = date.hijri.year;
-    hijriDay = hijriDay.replace(/^0+/, '');
-    if (hijriDay == 1) {
-        hijriDate.style.display = "none";
-    }
-    hijriDay--;    
+    hijriDay = hijriDay.replace(/^0+/, '');       
     hijriDate.textContent = `${hijriDay} ${hijriMonth} ${hijriYear}`;
 
     if (selectedCity) {
