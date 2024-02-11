@@ -1,9 +1,9 @@
 let selectedCountry;
 let selectedCity;
 let cityNameText = document.getElementById("cityName");
-let citiesList = document.getElementById("cityDataList");    
-let lastExistCity = "";
+let citiesList = document.getElementById("cityDataList");  
 let spinner = document.getElementById("spinner");
+let lastExistCity = "";
 
 let countries = [
 {   
@@ -447,60 +447,58 @@ let countries = [
     ]
 },
 {
-    country: {countryName: "فلسطين", enCountryName: "Palastine"},
+    country: {countryName: "فلسطين", enCountryName: "Israel"},
     cities: [
         { cityName: "القدس", enCityName: "Jerusalem" },
         { cityName: "رام الله", enCityName: "Ramallah" },
-        { cityName: "بيت لحم", enCityName: "Bethlehem" },
         { cityName: "نابلس", enCityName: "Nablus" },
         { cityName: "جنين", enCityName: "Jenin" },
         { cityName: "طولكرم", enCityName: "Tulkarm" },
         { cityName: "قلقيلية", enCityName: "Qalqilya" },
         { cityName: "سلفيت", enCityName: "Salfit" },
         { cityName: "غزة", enCityName: "Gaza" },
-        { cityName: "بيت حانون", enCityName: "Beit Hanoun" },
+        { cityName: "بيت حانون", enCityName: "Beit Hanun" },
         { cityName: "خان يونس", enCityName: "Khan Yunis" },
         { cityName: "دير البلح", enCityName: "Deir al-Balah" },
         { cityName: "رفح", enCityName: "Rafah" },
-        { cityName: "أم الفحم", enCityName: "Umm al-Fahm" },
-        { cityName: "اللد", enCityName: "Lod" },
-        { cityName: "نيشر", enCityName: "Nesher" },
-        { cityName: "رهط", enCityName: "Rahat" },
-        { cityName: "أم خالد", enCityName: "Netanya" },
-        { cityName: "بئر السبع", enCityName: "Beersheba" },
-        { cityName: "أشدود", enCityName: "Ashdod" },
-        { cityName: "قرية ملبّس", enCityName: "Petah Tikva" },
-        { cityName: "قرية جريشة", enCityName: "Ramat Gan" },
-        { cityName: "عسقلان", enCityName: "Ashkelon" },
-        { cityName: "كفر سابا", enCityName: "Kfar Saba" },
-        { cityName: "حيفا", enCityName: "Haifa" },
-        { cityName: "الناصرة", enCityName: "Nazareth" },
         { cityName: "جت", enCityName: "Jatt" },
         { cityName: "جسر الزرقاء", enCityName: "Jisr az-Zarqa" },
-        { cityName: "حولون", enCityName: "Holon" },
-        { cityName: "يافا", enCityName: "Tel Aviv" },
-        { cityName: "عكا", enCityName: "Acre" },
-        { cityName: "نهاريا", enCityName: "Nahariya" },
-        { cityName: "بني براك", enCityName: "Bnei Brak" },
-        { cityName: "رحوفوت", enCityName: "Rehovot" },
-        { cityName: "تمبل هيلز", enCityName: "Temple Hills" },
-        { cityName: "كفر سابا", enCityName: "Kfar Saba" },
-        { cityName: "كريات يام", enCityName: "Kiryat Yam" },
-        { cityName: "جيفعاتايم", enCityName: "Giv'atayim" },
-        { cityName: "كريات بياليك", enCityName: "Kiryat Bialik" },
-        { cityName: "الخالصة", enCityName: "Kiryat Shmona" },
-        { cityName: "رعنانا", enCityName: "Ra'anana" },
-        { cityName: "بات يام", enCityName: "Bat Yam" },
         { cityName: "سخنين", enCityName: "Sakhnin" },
         { cityName: "بيت جالا", enCityName: "Beit Jala" },
         { cityName: "جباليا", enCityName: "Jabalia" },
         { cityName: "دير الحطب", enCityName: "Deir al-Hatab" },
         { cityName: "بيت ساحور", enCityName: "Beit Sahur" },
+        { cityName: "يافا -تل أبيب-", enCityName: "Tel Aviv" },
+        { cityName: "أم خالد -نتانيا-", enCityName: "Netanya" },        
+        { cityName: "الخالصة -كريات شمونة-", enCityName: "Kiryat Shmona" },
+        { cityName: "الخليل -كريات جات-", enCityName: "Kiryat Gat" },
+        { cityName: "تبصر -رعنانا-", enCityName: "Ra'anana" },
+        { cityName: "قرية ملبّس -بتاح تكفا-", enCityName: "Petah Tikva" },
+        { cityName: "قرية جريشة -رامات جان-", enCityName: "Ramat Gan" },
+        { cityName: "بيت لحم", enCityName: "Bethlehem" },
+        { cityName: "أم الفحم", enCityName: "Umm al-Fahm" },
+        { cityName: "عكا", enCityName: "Akko" },
+        { cityName: "حيفا", enCityName: "Haifa" },
+        { cityName: "بئر السبع", enCityName: "Beersheba" },
+        { cityName: "أسدود", enCityName: "Ashdod" },
         { cityName: "بيت الشمس", enCityName: "Beit Shemesh" },
+        { cityName: "بات يام", enCityName: "Bat Yam" },
+        { cityName: "حولون", enCityName: "Holon" },
+        { cityName: "رهط", enCityName: "Rahat" },
         { cityName: "سديروت", enCityName: "Sderot" },
         { cityName: "قلنسوة", enCityName: "Qalansawe" },
         { cityName: "أور يهودا", enCityName: "Or Yehuda" },
-        { cityName: "الخليل", enCityName: "Kiryat Gat" }
+        { cityName: "اللد", enCityName: "Lod" },
+        { cityName: "نيشر", enCityName: "Nesher" },
+        { cityName: "عسقلان", enCityName: "Ashkelon" },
+        { cityName: "كفر سابا", enCityName: "Kfar Saba" },
+        { cityName: "الناصرة", enCityName: "Nazareth" },
+	    { cityName: "نهاريا", enCityName: "Nahariya" },
+        { cityName: "بني براك", enCityName: "Bnei Brak" },
+        { cityName: "رحوفوت", enCityName: "Rehovot" },
+        { cityName: "كريات يام", enCityName: "Kiryat Yam" },
+        { cityName: "جيفعاتايم", enCityName: "Giv'atayim" },
+        { cityName: "كريات بياليك", enCityName: "Kiryat Bialik" },
     ]
 },
 {
@@ -1288,7 +1286,7 @@ function getAdjustments(enCountryName, enCityName) {
         "Syria": { "Fajr": -55, "Sunrise": -59, "Dhuhr": -59, "Asr": -58, "Maghrib": -60, "Isha": -60 },
         "Lebanon": { "Fajr": 8, "Isha": -10 },
         "Jordan": { "Fajr": -54, "Sunrise": -60, "Dhuhr": -59, "Asr": -59, "Maghrib": -60, "Isha": -60 },
-        "Palastine": { "Fajr": 8, "Isha": -11 },
+        "Israel": { "Fajr": 8, "Dhuhr": 1, "Asr": 1, "Isha": -12 },  
         "Libya": { "Isha": -10 },
         "Tunisia": { "Fajr": 8, "Asr": 2, "Isha": -4 },
         "Algeria": { "Fajr": 7, "Asr": 2, "Isha": -7 },
@@ -1572,6 +1570,12 @@ function fillCities(cityArr, enCountryName) {
             }
         }        
     });
+
+    cityInput.addEventListener("keydown", (event) => {
+        if (event.key === "Escape"){
+            cityInput.value = "";
+        }
+    })
 }
 
 function fillCountries() {
@@ -1618,6 +1622,12 @@ function fillCountries() {
             }
         }, 300);
     });
+
+    countryInput.addEventListener("keydown", (event) => {
+        if (event.key === "Escape"){
+            countryInput.value = "";
+        }
+    })
 }
 
 document.addEventListener("DOMContentLoaded", () => {
