@@ -1,9 +1,9 @@
-let selectedCountry;
-let selectedCity;
 let cityNameText = document.getElementById("cityName");
 let citiesList = document.getElementById("cityDataList");  
 let spinner = document.getElementById("spinner");
 let lastExistCity = "";
+let selectedCountry;
+let selectedCity;
 
 let countries = [
 {   
@@ -468,13 +468,13 @@ let countries = [
         { cityName: "جباليا", enCityName: "Jabalia" },
         { cityName: "دير الحطب", enCityName: "Deir al-Hatab" },
         { cityName: "بيت ساحور", enCityName: "Beit Sahur" },
-        { cityName: "يافا -تل أبيب-", enCityName: "Tel Aviv" },
-        { cityName: "أم خالد -نتانيا-", enCityName: "Netanya" },        
-        { cityName: "الخالصة -كريات شمونة-", enCityName: "Kiryat Shmona" },
-        { cityName: "الخليل -كريات جات-", enCityName: "Kiryat Gat" },
-        { cityName: "تبصر -رعنانا-", enCityName: "Ra'anana" },
-        { cityName: "قرية ملبّس -بتاح تكفا-", enCityName: "Petah Tikva" },
-        { cityName: "قرية جريشة -رامات جان-", enCityName: "Ramat Gan" },
+        { cityName: "يافا (تل أبيب)", enCityName: "Tel Aviv" },
+        { cityName: "أم خالد (نتانيا)", enCityName: "Netanya" },        
+        { cityName: "الخالصة (كريات شمونة)", enCityName: "Kiryat Shmona" },
+        { cityName: "الخليل (كريات جات)", enCityName: "Kiryat Gat" },
+        { cityName: "تبصر (رعنانا)", enCityName: "Ra'anana" },
+        { cityName: "قرية ملبّس (بتاح تكفا)", enCityName: "Petah Tikva" },
+        { cityName: "قرية جريشة (رامات جان)", enCityName: "Ramat Gan" },
         { cityName: "بيت لحم", enCityName: "Bethlehem" },
         { cityName: "أم الفحم", enCityName: "Umm al-Fahm" },
         { cityName: "عكا", enCityName: "Akko" },
