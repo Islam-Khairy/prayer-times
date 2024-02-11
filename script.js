@@ -1438,9 +1438,9 @@ function renderPrayerTimes(prayerTimes) {
 function handlePrayerTimesError(error) {
     let errorMessage = '.مواقيت الصلاة غير متوفرة لهذه المنطقة';
 
-    if (error instanceof TypeError && error.message === 'Failed to fetch') {
+    if (error.message === 'Failed to fetch') {
         errorMessage = 'يرجى التحقق من اتصالك بالإنترنت';
-    } else if (error instanceof Error && error.message === 'Timeout') {
+    } else if (error.message === 'Timeout') {
         errorMessage = 'انتهى الوقت المحدد للإستجابة، يُرجى إعادة المحاولة';
     }
 
