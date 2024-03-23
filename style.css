@@ -2,305 +2,311 @@
 @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ruwudu:wght@400;500;600;700&family=Scheherazade+New:wght@400;500;600;700&display=swap');
 
-*{
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 :root {
-	--bg-color: rgba(36, 129, 75, .8);
-	--first-text-color:  rgba(199, 247, 219, 0.8);
-	--second-text-color: rgba(230, 230, 230, .8);
+  --bg-color: rgba(36, 129, 75, 0.8);
+  --first-text-color: rgba(199, 247, 219, 0.8);
+  --second-text-color: rgba(230, 230, 230, 0.8);
 }
 
 html {
-	font-size: 62.5%;
-
+  font-size: 62.5%;
 }
 
 body {
-	font-family: 'Reem Kufi', sans-serif;
-	background: url("background/mosque4.jpg") center/cover no-repeat;
-    position: relative;
+  font-family: 'Reem Kufi', sans-serif;
+  background: url('background/mosque4.jpg') center/cover no-repeat;
+  position: relative;
 }
 
 .container {
-    height: 100vh;
-    max-width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-    z-index: 1;
-    padding: 0 1rem;
-    margin-top: auto;
+  height: 100vh;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+  padding: 0 1rem;
+  margin-top: auto;
 }
 
 .container::before {
-    content: "";
-    background: rgba(0, 0, 0, 0.4);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 100%;
-    z-index: -1; 
+  content: '';
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  z-index: -1;
 }
 
 .prayerTimes-container {
-	position: relative;
-	color: var(--first-text-color);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	left: 2rem;
+  position: relative;
+  color: var(--first-text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 2rem;
 }
 
 .prayer {
-	background-color: var(--bg-color);
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	margin-bottom: 1rem;
-	padding: 2rem 1rem;
-	width: 20rem;
-	border-radius: 5rem;
-	transition: .7s;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 2rem 1rem;
+  width: 20rem;
+  border-radius: 5rem;
+  transition: 0.7s;
 }
 
 .prayer:hover {
-	transform: scale(1.1);
-	background-color: rgba(36, 129, 75, .9);
+  transform: scale(1.1);
+  background-color: rgba(36, 129, 75, 0.9);
 }
 
-.prayerTime, .prayerName {
-	font-size: 2rem;
+.prayerTime,
+.prayerName {
+  font-size: 2rem;
 }
 
 .prayerTime {
-	direction: rtl;
+  direction: rtl;
 }
 
 .icon {
-	font-size: 4rem;
-
+  font-size: 4rem;
 }
 
-.Fajr-icon, .Maghrib-icon {
-	color: #c2bfbf;
+.Fajr-icon,
+.Maghrib-icon {
+  color: #c2bfbf;
 }
 
 .Sunrise-icon {
-	color: #ffeea3;
+  color: #ffeea3;
 }
 
 .Dhuhr-icon {
-	color: #f7c81d
+  color: #f7c81d;
 }
 
 .Asr-icon {
-	color: #cfb955;
-
+  color: #cfb955;
 }
 
 .Isha-icon {
-	color: #858585;
+  color: #858585;
 }
 
 .cityDate-container {
-	font-family:ruwudu;
-	position: relative;
-	left: -12rem;
-	color: var(--second-text-color);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 25%;
+  font-family: ruwudu;
+  position: relative;
+  left: -12rem;
+  color: var(--second-text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
 }
 
 #cityName {
-    font-weight: 700;
-    font-size: 6rem;
-	margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 6rem;
+  margin-bottom: 1rem;
 }
 
 #day {
-	font-size: 5rem;
-    font-weight: 800;
-	letter-spacing: 0.2rem;	
+  font-size: 5rem;
+  font-weight: 800;
+  letter-spacing: 0.2rem;
 }
 
 .date {
-	direction: rtl;
-	font-size: 2.5rem;
-    font-weight: 700;
-	margin-top: 1.5rem;
-	letter-spacing: 0.1rem;
+  direction: rtl;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  letter-spacing: 0.1rem;
 }
 
 .list {
-	direction: rtl;
+  direction: rtl;
 }
 
 .countriesList {
-	position: absolute;
-	top: 2rem;
-	right: 5rem;
+  position: absolute;
+  top: 2rem;
+  right: 5rem;
 }
 
 .citiesList {
-	position: absolute;
-    top: 2rem;
-    right: 30rem;
+  position: absolute;
+  top: 2rem;
+  right: 30rem;
 }
 
 label {
-	font-size: 2.5rem; 
-	font-weight: 600;
-	color: var(--second-text-color);
-	padding-bottom: .5rem;
-	display: block; 
-	text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--second-text-color);
+  padding-bottom: 0.5rem;
+  display: block;
+  text-align: center;
 }
 
-#countryInput, #cityInput {
-	width: 20rem;
-	border-radius: 1.5rem;
-	border: .1rem solid #cccccc; 
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-	outline: none;
-	font-size: 2.5rem;
-	font-family: 'Reem Kufi', sans-serif;
-	background: transparent;
-	text-align: center;
-	padding: .3rem;
+#countryInput,
+#cityInput {
+  width: 20rem;
+  border-radius: 1.5rem;
+  border: 0.1rem solid #cccccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  outline: none;
+  font-size: 2.5rem;
+  font-family: 'Reem Kufi', sans-serif;
+  background: transparent;
+  text-align: center;
+  padding: 0.3rem;
 }
 
 .error-message {
-	font-family: Amiri !important;
+  font-family: Amiri !important;
 }
 
 #spinner {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: .8rem solid rgba(255, 255, 255, 0.2); 
-    border-top: .8rem solid #bdc3c7;
-    border-radius: 50%;
-    width: 6rem;
-    height: 6rem;
-    animation: spin 2s linear infinite;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 0.8rem solid rgba(255, 255, 255, 0.2);
+  border-top: 0.8rem solid #bdc3c7;
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  animation: spin 2s linear infinite;
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .footer {
-    color: var(--second-text-color);
-    position: fixed;
-    bottom: 0;
+  color: var(--second-text-color);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 0 2rem 0.6rem;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: auto;
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .cityDate-container {
+    top: -2rem;
+    left: -6rem;
+  }
+
+  label {
+    display: inline-block;
+    margin: 2rem;
+  }
+
+  .citiesList {
+    top: 10rem;
+    right: 4rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .prayerTimes-container {
+    top: -10rem;
+    left: 5rem;
+  }
+
+  .cityDate-container {
+    top: -12rem;
+    left: 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .prayerTimes-container {
+    top: 0;
     left: 0;
-	padding: 0 2rem .6rem;
-    font-size: 2rem;
-    font-weight: 600;
-    margin-top: auto;
+  }
+
+  .cityDate-container {
+    top: -3rem;
+    left: 0;
+  }
 }
 
-@media (max-width: 1024px){
-	html {
-		font-size: 56.25%;
-	}
+@media (min-width: 540px) and (max-width: 575.98px) {
+  html {
+    font-size: 43.75%;
+  }
 
-	.cityDate-container {
-		top: -2rem;
-		left: -6rem;
-	}
-	
-	label {
-		display: inline-block;
-		margin: 2rem;
-	}
+  .prayerTimes-container {
+    top: -5rem;
+    left: 2rem;
+  }
 
-	.citiesList {
-		top: 10rem;
-		right: 4rem;
-	}
+  .cityDate-container {
+    top: -6rem;
+    left: 2rem;
+  }
 }
 
-@media (max-width: 992px){
-	.prayerTimes-container {
-		top: -10rem;
-		left: 5rem;		
-	}
+@media (max-width: 450px) {
+  html {
+    font-size: 43.75%;
+  }
 
-	.cityDate-container {
-		top: -12rem;
-		left: 5rem;
-	}
+  .prayerTimes-container {
+    top: -8rem;
+    left: -2rem;
+  }
 
+  .cityDate-container {
+    top: -10rem;
+    left: 2rem;
+  }
+
+  label {
+    margin-right: -1rem;
+  }
+  .footer {
+	left: 1rem;
+  }
 }
 
-@media (max-width: 768px){
-	.prayerTimes-container {
-		top: 0;
-		left: 0;		
-	}
-
-	.cityDate-container {
-		top: -3rem;
-		left: 0;
-	}
-}
-
-@media (min-width: 540px) and (max-width: 575.98px){
-	html{
-		font-size: 43.75%;
-	}
-
-	.prayerTimes-container {
-		top: -5rem;
-		left: 2rem;
-	}
-
-	.cityDate-container {
-		top: -6rem;
-		left: 2rem;
-	}
-}
-
-@media (max-width: 450px){
-	html{
-		font-size: 43.75%;
-	}
-
-	.prayerTimes-container {
-		top: -8rem;
-		left: -2rem;		
-	}
-
-	.cityDate-container {
-		top: -10rem;
-		left: 2rem;
-	}
-
-	label {
-		margin-right: -1rem;
-	}
-}
-
-@media (max-width: 390px){
-	html {
-		font-size: 37.5%;
-	}
+@media (max-width: 390px) {
+  html {
+    font-size: 37.5%;
+  }
 }
 
 @media (max-width: 320px) {
-	html {
-		font-size: 28%;
-	}
+  html {
+    font-size: 28%;
+  }
 }
