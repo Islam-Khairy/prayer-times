@@ -95,9 +95,9 @@ body {
 }
 
 .Sunrise-icon {
-  animation: sunriseAnimation 8s ease-out infinite;
+  /* animation: sunriseAnimation 8s ease-out infinite; */
   animation-delay: 0.6s;
-  will-change: transform;
+  /* will-change: transform; */
 }
 
 .Dhuhr-icon {
@@ -106,7 +106,7 @@ body {
 }
 
 .Asr-icon {
-  transform: cloudySunAnimation 6s ease-in-out infinite;
+  animation: cloudySunAnimation 6s ease-in-out infinite;
   animation-delay: 1s;
 }
 
@@ -418,7 +418,7 @@ body {
 }
 
 .cityDate-container {
-  font-family: ruwudu;
+  font-family: 'Ruwudu','Reem Kufi', sans-serif;
   position: relative;
   left: -12rem;
   color: var(--second-text-color);
