@@ -90,27 +90,33 @@ body {
 }
 
 .Fajr-icon {
+  animation: translateAnimation 4s linear infinite;
   animation-delay: 0.4s;
 }
 
 .Sunrise-icon {
+  animation: sunriseAnimation 8s ease-out infinite;
   animation-delay: 0.6s;
   will-change: transform;
 }
 
 .Dhuhr-icon {
+  animation: ScalingAnimation 6s alternate infinite;
   animation-delay: 0.8s;
 }
 
 .Asr-icon {
+  transform: cloudySunAnimation 6s ease-in-out infinite;
   animation-delay: 1s;
 }
 
 .Maghrib-icon {
+  animation: sunsetAnimation 8s ease-in infinite;
   animation-delay: 1.2s;
 }
 
 .Isha-icon {
+  animation: translateAnimation 4s linear infinite;
   animation-delay: 1.4s;
 }
 
@@ -342,7 +348,7 @@ body {
 @keyframes sunsetAnimation {
   0%,
   100% {
-    transform: translateY(-5px) scale(1);
+    transform: translateY(0) scale(1);
     opacity: 1;
   }
   80% {
@@ -360,7 +366,7 @@ body {
 @-webkit-keyframes sunsetAnimation {
   0%,
   100% {
-    -webkit-transform: translateY(-5px) scale(1);
+    -webkit-transform: translateY(0) scale(1);
     opacity: 1;
   }
   80% {
@@ -378,11 +384,11 @@ body {
 @-moz-keyframes sunsetAnimation {
   0%,
   100% {
-    -moz-transform: translateY(-5px) scale(1);
+    -moz-transform: translateY(0) scale(1);
     opacity: 1;
   }
   80% {
-    -moz-transform: translateY(5px) scale(0.6);
+    -moz-transform: translateY(0) scale(0.6);
     opacity: 0;
   }
   95% {
@@ -396,7 +402,7 @@ body {
 @-ms-keyframes sunsetAnimation {
   0%,
   100% {
-    -ms-transform: translateY(-5px) scale(1);
+    -ms-transform: translateY(0) scale(1);
     opacity: 1;
   }
   80% {
