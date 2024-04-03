@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ruwudu:wght@400;500;600;700&family=Scheherazade+New:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Caveat:wght@400..700&family=Courgette&family=Dancing+Script:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Edu+NSW+ACT+Foundation:wght@400..700&family=Galada&family=Imbue:opsz,wght@10..100,100..900&family=Kalam:wght@300;400;700&family=Kaushan+Script&family=Merienda:wght@300..900&family=Namdhinggo:wght@400;500;600;700;800&family=Noto+Serif+JP&family=Oleo+Script:wght@400;700&family=PT+Sans+Narrow:wght@400;700&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 * {
   padding: 0;
@@ -9,7 +10,7 @@
 }
 
 :root {
-  --bg-color: rgba(36, 129, 75, 0.8);
+  --items-bg-color: rgba(36, 129, 75, 0.8);
   --first-text-color: rgba(199, 247, 219, 0.8);
   --second-text-color: rgba(230, 230, 230, 0.8);
 }
@@ -47,7 +48,7 @@ body {
   z-index: -1;
 }
 
-.prayerTimes-container {
+.prayer-times-container {
   position: relative;
   color: var(--first-text-color);
   display: flex;
@@ -57,7 +58,7 @@ body {
 }
 
 .prayer {
-  background-color: var(--bg-color);
+  background-color: var(--items-bg-color);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -66,6 +67,8 @@ body {
   width: 20rem;
   border-radius: 5rem;
   transition: 0.7s;
+  animation: fadeInUp 0.5s ease-out;
+  animation-fill-mode: both;
 }
 
 .prayer:hover {
@@ -73,38 +76,130 @@ body {
   background-color: rgba(36, 129, 75, 0.9);
 }
 
-.prayerTime,
-.prayerName {
+.prayer-time,
+.prayer-name {
   font-size: 2rem;
 }
 
-.prayerTime {
+.prayer-time {
   direction: rtl;
 }
 
-.icon {
-  font-size: 4rem;
+.prayer-icon {
+  max-width: 4rem;
 }
 
-.Fajr-icon,
-.Maghrib-icon {
-  color: #c2bfbf;
+.Fajr-icon {
+  animation-delay: 0.4s;
+  animation: translateAnimation 4s linear infinite;
 }
 
 .Sunrise-icon {
-  color: #ffeea3;
+  animation-delay: 0.6s;
+  animation: sunriseAnimation 8s ease-out infinite;
 }
 
 .Dhuhr-icon {
-  color: #f7c81d;
+  animation-delay: 0.8s;
+  animation: ScalingAnimation 6s alternate infinite;
 }
 
 .Asr-icon {
-  color: #cfb955;
+  animation-delay: 1s;
+  animation: sunBehindCloudAnimation 6s ease-in-out infinite;
+}
+
+.Maghrib-icon {
+  animation-delay: 1.2s;
+  animation: sunsetAnimation 8s ease-in infinite;
 }
 
 .Isha-icon {
-  color: #858585;
+  animation-delay: 1.4s;
+  animation: translateAnimation 4s linear infinite;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes translateAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes sunriseAnimation {
+  0%,
+  100% {
+    transform: translateY(10px) scale(0.5) rotate(0deg);
+    opacity: 0;
+  }
+  80% {
+    transform: translateY(0) scale(1) rotate(90deg);
+    opacity: 1;
+  }
+  95% {
+    transform: translateY(-5px) scale(1) rotate(90deg);
+    opacity: 0.1;
+  }
+}
+
+@keyframes ScalingAnimation {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes sunBehindCloudAnimation {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.4;
+  }
+  95% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes sunsetAnimation {
+  0%,
+  100% {
+    transform: translateY(-5px) scale(1);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(5px) scale(0.8);
+    opacity: 0;
+  }
+  95% {
+    opacity: 0.1;
+  }
+  98% {
+    opacity: 0.5;
+  }
 }
 
 .cityDate-container {
@@ -205,14 +300,18 @@ label {
 }
 
 .footer {
-  color: var(--second-text-color);
   position: fixed;
   bottom: 0;
-  left: 0;
-  padding: 0 2rem 0.6rem;
-  font-size: 2rem;
-  font-weight: 600;
-  margin-top: auto;
+  left: 40%;
+  padding: 1.2rem;
+  color: white;
+}
+
+.footer-text {
+  font-size: 2.2rem;
+  font-family: 'Courgette', cursive, 'Charm', cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 @media (max-width: 1024px) {
@@ -237,7 +336,7 @@ label {
 }
 
 @media (max-width: 992px) {
-  .prayerTimes-container {
+  .prayer-times-container {
     top: -10rem;
     left: 5rem;
   }
@@ -249,13 +348,18 @@ label {
 }
 
 @media (max-width: 768px) {
-  .prayerTimes-container {
+  .prayer-times-container {
     top: 0;
     left: 0;
   }
 
   .cityDate-container {
     top: -3rem;
+    left: 0;
+  }
+
+  
+  .footer {
     left: 0;
   }
 }
@@ -265,7 +369,7 @@ label {
     font-size: 43.75%;
   }
 
-  .prayerTimes-container {
+  .prayer-times-container {
     top: -5rem;
     left: 2rem;
   }
@@ -281,7 +385,7 @@ label {
     font-size: 43.75%;
   }
 
-  .prayerTimes-container {
+  .prayer-times-container {
     top: -8rem;
     left: -2rem;
   }
@@ -293,9 +397,6 @@ label {
 
   label {
     margin-right: -1rem;
-  }
-  .footer {
-	left: 1rem;
   }
 }
 

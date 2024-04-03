@@ -38,7 +38,7 @@ let countries = [
     ],
   },
   {
-    country: { countryName: 'السعودية', enCountryName: 'Saudi-Arabia' },
+    country: { countryName: 'السعودية', enCountryName: 'Saudi Arabia' },
     cities: [
       { cityName: 'الرياض', enCityName: 'Riyadh' },
       { cityName: 'جدة', enCityName: 'Jeddah' },
@@ -190,7 +190,7 @@ let countries = [
       { cityName: 'الخور', enCityName: 'Al Khor' },
       { cityName: 'الخليج الغربي', enCityName: 'Al Khawr' },
       { cityName: 'الوجهة', enCityName: 'Al Wukair' },
-      { cityName: 'الدحيل', enCityName: 'Duhail' },
+      { cityName: 'الدحيل', enCityName: 'Dahail' },
       { cityName: 'أم صلال', enCityName: 'Umm Salal' },
       { cityName: 'مسيعيد', enCityName: 'Mesaieed' },
       { cityName: 'الشحانية', enCityName: 'Al Shahaniya' },
@@ -1264,111 +1264,18 @@ const monthsArabicNames = {
   12: 'ديسمبر',
 };
 
-function getAdjustments(enCountryName, enCityName) {
-  const countryAdjustments = {
-    Egypt: { Asr: 1, Isha: -12 },
-    'Saudi-Arabia': { Asr: 1, Fajr: 5, Isha: 30 },
-    Yemen: { Fajr: 5 },
-    Oman: { Fajr: 5 },
-    'United Arab Emirates': { Fajr: 5 },
-    Qatar: { Fajr: 4 },
-    Bahrain: { Fajr: 5 },
-    Kuwait: { Fajr: 5 },
-    Iraq: { Fajr: 5, Isha: -8 },
-    Turkey: { Fajr: 7, Isha: -3 },
-    Syria: { Fajr: 5, Sunrise: 1, Dhuhr: 1, Asr: 2 },
-    Lebanon: { Fajr: 8, Isha: -10 },
-    Jordan: { Fajr: 6 },
-    Israel: { Fajr: 8, Dhuhr: 1, Asr: 1, Isha: -12 },
-    Libya: { Isha: -10 },
-    Tunisia: { Fajr: 8, Asr: 2, Isha: -4 },
-    Algeria: { Fajr: 7, Asr: 2, Isha: -7 },
-    Morocco: { Fajr: 7, Isha: -9 },
-    Mauritania: { Fajr: 7, Isha: -19 },
-    Mali: { Fajr: 7, Isha: -21 },
-    Senegal: { Fajr: 6, Isha: -20 },
-    Gambia: { Fajr: 7, Isha: -21 },
-    Guinea: { Fajr: 7, Isha: -21 },
-    'Sierra Leone': { Fajr: 7, Isha: -22 },
-    'Ivory Coast': { Fajr: 7, Isha: -22 },
-    Cameroon: { Fajr: 7, Isha: -22 },
-    Nigeria: { Asr: -2, Isha: -21 },
-    Niger: { Fajr: 6, Isha: -20 },
-    Chad: { Fajr: 7, Isha: -21 },
-    Sudan: { Isha: -18 },
-    'Republic of South Sudan': { Isha: -20 },
-    Djibouti: { Fajr: 7, Isha: -21 },
-    Somalia: { Fajr: 7, Asr: 2, Isha: -23 },
-    Iran: { Fajr: 8, Isha: -8 },
-    Afghanistan: { Fajr: 7, Asr: 2, Isha: -4 },
-    Pakistan: { Fajr: 8, Asr: 45, Isha: -6 },
-    Tajikistan: { Fajr: 9, Asr: 2, Isha: -5 },
-    Kyrgyzstan: { Fajr: 8, Asr: 2, Isha: 2 },
-    Kazakhstan: { Fajr: 8, Asr: 3, Isha: 2 },
-    Uzbekistan: { Fajr: 8, Asr: 2, Isha: -3 },
-    Turkmenistan: { Fajr: 7, Asr: 1, Isha: -7 },
-    Azerbaijan: { Fajr: 6, Asr: 1, Isha: -2 },
-    Bangladesh: { Fajr: 7, Asr: 1, Isha: -12 },
-    Malaysia: { Fajr: 6, Asr: 1, Isha: -18 },
-    Indonesia: { Fajr: 7, Asr: 1, Isha: -17 },
-    Comoros: { Fajr: 7, Asr: 1, Isha: -20 },
-    'Bosnia and Herzegovina': { Fajr: 8, Asr: 2, Isha: 3 },
-  };
-
-  const citiesAdjustments = {
-    // "Egypt": {
-    //     "Cairo": { "Fajr": 0, "Sunrise": 0, "Dhuhr": , "Asr": 0, "Maghrib": 0, "Isha": 0 },
-  };
-
-  const adjustments = {};
-
-  if (enCountryName in countryAdjustments) {
-    Object.assign(adjustments, countryAdjustments[enCountryName]);
-  }
-
-  if (
-    enCityName &&
-    enCountryName in citiesAdjustments &&
-    enCityName in citiesAdjustments[enCountryName]
-  ) {
-    Object.entries(citiesAdjustments[enCountryName][enCityName]).forEach(([prayer, adjustment]) => {
-      adjustments[prayer] = (adjustments[prayer] || 0) + adjustment;
-    });
-  }
-
-  return adjustments;
-}
-
-function adjustPrayerTimes(prayerTimes, enCityName, enCountryName) {
-  const adjustments = getAdjustments(enCountryName, enCityName);
-
-  const adjustedPrayerTimes = { ...prayerTimes };
-
-  for (let prayer in adjustments) {
-    if (adjustments.hasOwnProperty(prayer)) {
-      if (adjustedPrayerTimes.hasOwnProperty(prayer)) {
-        adjustedPrayerTimes[prayer] = addMinutes(prayerTimes[prayer], adjustments[prayer]);
-      }
-    }
-  }
-
-  return adjustedPrayerTimes;
-}
-
-function handlePrayerTimesData(data, enCityName, enCountryName, selectedCity) {
+function handlePrayerTimesData(data, selectedCity) {
   try {
-    const timings = data?.data?.timings;
-    const date = data?.data?.date;
+    const { timings, date } = data?.data;
 
     if (!timings || !date) {
       throw new Error('Undefined or unexpected data structure');
     }
 
-    const adjustedTimings = adjustPrayerTimes(timings, enCityName, enCountryName);
-    renderPrayerTimes(adjustedTimings);
+    renderPrayerTimes(timings);
     updateUI(date, selectedCity);
   } catch (error) {
-    handlePrayerTimesError();
+    handlePrayerTimesError(error);
   }
 }
 
@@ -1386,9 +1293,9 @@ function renderPrayerTimes(prayerTimes) {
 function handlePrayerTimesError(error) {
   let errorMessage = '.مواقيت الصلاة غير متوفرة لهذه المنطقة';
 
-  if (error.message === 'Failed to fetch') {
-    errorMessage = 'يرجى التحقق من اتصالك بالإنترنت';
-  } else if (error.message === 'Timeout') {
+  if (error.message.includes('Failed to fetch') || error.code === 404) {
+    errorMessage = 'يرجى التحقق من اتصالك بالإنترنت أو العنوان غير موجود';
+  } else if (error.message.includes('Timeout')) {
     errorMessage = 'انتهى الوقت المحدد للإستجابة، يُرجى إعادة المحاولة';
   }
 
@@ -1402,50 +1309,26 @@ function handlePrayerTimesError(error) {
   });
 }
 
-function updateUI(date, selectedCity) {
+function updateUI({ hijri, gregorian }, selectedCity) {
   const today = document.getElementById('day');
-  today.textContent = `${date.hijri.weekday.ar}`;
+  today.textContent = `${hijri.weekday.ar}`;
 
   const gregorianDate = document.getElementById('gregorian');
-  const numericMonth = parseInt(date.gregorian.month.number, 10);
+  const { month: gregorianMonth } = gregorian;
+  const numericMonth = parseInt(gregorianMonth.number, 10);
   const arabicMonth = monthsArabicNames[numericMonth];
-  const gregorianParts = date.gregorian.date.split('-');
-  const gregorianDay = gregorianParts[0].replace(/^0+/, '');
-  gregorianDate.textContent = `${gregorianDay} ${arabicMonth} ${gregorianParts[2]}`;
+  const gregorianParts = gregorian.date.split('-');
+  const gregorianDayFormatted = gregorianParts[0].replace(/^0+/, '');
+  gregorianDate.textContent = `${gregorianDayFormatted} ${arabicMonth} ${gregorianParts[2]}`;
 
   const hijriDate = document.getElementById('hijri');
-  let hijriDay = date.hijri.day;
-  let hijriMonth = date.hijri.month.ar;
-  let hijriYear = date.hijri.year;
+  let { day: hijriDay, month: hijriMonth, year: hijriYear } = hijri;
   hijriDay = hijriDay.replace(/^0+/, '');
-  hijriDate.textContent = `${hijriDay} ${hijriMonth} ${hijriYear}`;
+  hijriDate.textContent = `${hijriDay} ${hijriMonth.ar} ${hijriYear}`;
 
   if (selectedCity) {
     lastExistCity = selectedCity.cityName;
     cityNameText.textContent = lastExistCity;
-  }
-}
-
-function addMinutes(timeString, minutesToAdd) {
-  const [hours, minutes] = timeString.split(':').map(Number);
-  const totalMinutes = hours * 60 + minutes + minutesToAdd;
-  const newHours = ((Math.floor(totalMinutes / 60) % 24) + 24) % 24;
-  const newMinutes = totalMinutes % 60;
-  return `${String(newHours).padStart(2, '0')}:${String(newMinutes).padStart(2, '0')}`;
-}
-
-function fillPrayerTimes(id, time) {
-  const element = document.getElementById(id);
-  if (
-    element &&
-    id !== 'Sunset' &&
-    id !== 'Imsak' &&
-    id !== 'Midnight' &&
-    id !== 'Firstthird' &&
-    id !== 'Lastthird'
-  ) {
-    element.textContent = time;
-  } else {
   }
 }
 
@@ -1456,36 +1339,71 @@ function convertTimeFormat(timeString) {
   return `${twelveHourFormat}:${String(minutes).padStart(2, '0')} ${meridiem}`;
 }
 
-function getPrayerTimes(enCityName, enCountryName, selectedCity) {
+function fetchPrayerTimesFromAPI(enCityName, enCountryName) {
   spinner.style.display = 'block';
 
-  fetchPrayerTimesFromAPI(enCityName, enCountryName)
+  const today = new Date();
+  const date = `${String(today.getDate()).padStart(2, '0')}-${String(today.getMonth() + 1).padStart(
+    2,
+    '0',
+  )}-${today.getFullYear()}`;
+
+  const method = getCalculationMethod(enCountryName);
+
+  const url = `https://api.aladhan.com/v1/timingsByCity?city=${encodeURIComponent(
+    enCityName,
+  )}&country=${encodeURIComponent(enCountryName)}&date=${date}&method=${method}`;
+
+  return fetch(url)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.json();
+    })
     .then((data) => {
-      handlePrayerTimesData(data, enCityName, enCountryName, selectedCity);
       spinner.style.display = 'none';
+      return data;
     })
     .catch((error) => {
-      handlePrayerTimesError(error);
+      console.error('Error fetching prayer times:', error);
       spinner.style.display = 'none';
+      throw error;
     });
 }
 
-function fetchPrayerTimesFromAPI(enCityName, enCountryName) {
-  const url = `https://api.aladhan.com/v1/timingsByCity?city=${encodeURIComponent(
-    enCityName,
-  )}&country=${encodeURIComponent(enCountryName)}&method=8`;
+function getCalculationMethod(enCountryName) {
+  const countryMethods = {
+    Egypt: 5,
+    'Saudi Arabia': 4,
+    Yemen: 8,
+    Oman: 8,
+    'United Arab Emirates': 8,
+    Qatar: 10,
+    Kuwait: 9,
+    Bahrain: 10,
+    Iraq: 9,
+    Iran: 9,
+    Syria: 10,
+    Jordan: 10,
+    Libya: 5,
+    Tunisia: 18,
+    Algeria: 19,
+    Sudan: 5,
+  };
 
-  return fetch(url).then((response) => {
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-    return response.json();
-  });
+  return countryMethods[enCountryName] || 3;
 }
 
 function handleCitySelection(selectedCity, enCountryName) {
   if (selectedCity) {
-    fetchPrayerTimesFromAPI(selectedCity.enCityName, enCountryName);
+    fetchPrayerTimesFromAPI(selectedCity.enCityName, enCountryName)
+      .then((data) => {
+        handlePrayerTimesData(data, selectedCity);
+      })
+      .catch((error) => {
+        handlePrayerTimesError(error);
+      });
   }
 }
 
@@ -1520,7 +1438,7 @@ function fillCities(cityArr, enCountryName) {
 
     if (selectedCity) {
       if (enCountryName) {
-        getPrayerTimes(selectedCity.enCityName, enCountryName, selectedCity);
+        handleCitySelection(selectedCity, enCountryName);
       }
     }
   });
@@ -1587,7 +1505,7 @@ document.addEventListener('DOMContentLoaded', () => {
   fillCountries();
 });
 
-var typed = new Typed('.footer', {
+var typed = new Typed('.footer-text', {
   strings: ['Generated with ❤️ by Islam Khairy'],
   typeSpeed: 100,
   backSpeed: 100,

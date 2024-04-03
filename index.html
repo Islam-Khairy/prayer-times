@@ -1,72 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>Prayer Times</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="style.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.all.min.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div id="spinner"></div>
-        <div id="prayerTimes-container" class="prayerTimes-container">
-            <div class="prayer">
-                <h2 class="prayerTime" id="Fajr">00:00</h2>
-                <h1 class="prayerName">الفجر</h1>
-                <i class='icon Fajr-icon bx bxs-moon'></i>
-            </div>
-            <div class="prayer">
-                <h2 class="prayerTime" id="Sunrise">00:00</h2>
-                <h1 class="prayerName">الشروق</h1>
-                <i class='icon Sunrise-icon bx bxs-sun'></i>
-            </div>
-            <div class="prayer">
-                <h2 class="prayerTime" id="Dhuhr">00:00</h2>
-                <h1 class="prayerName">الظهر</h1>
-                <i class="icon Dhuhr-icon fa-regular fa-sun"></i>        </div>
-            <div class="prayer">
-                <h2 class="prayerTime" id="Asr">00:00</h2>
-                <h1 class="prayerName">العصر</h1>
-                <i class="icon Asr-icon fa-solid fa-cloud-sun"></i>
-            </div>
-            <div class="prayer">
-                <h2 class="prayerTime" id="Maghrib">00:00</h2>
-                <h1 class="prayerName">المغرب</h1>
-                <i class="icon Maghrib-icon fa-solid fa-cloud"></i>
-            </div>
-            <div class="prayer">
-                <h2 class="prayerTime" id="Isha">00:00</h2>
-                <h1 class="prayerName">العشاء</h1>
-                <i class="icon Isha-icon fa-solid fa-cloud-moon"></i>
-            </div>
+      <div id="spinner"></div>
+      <div class="prayer-times-container">
+        <div class="prayer">
+          <h2
+            class="prayer-time"
+            id="Fajr"
+          >
+            00:00
+          </h2>
+          <h1 class="prayer-name">الفجر</h1>
+          <img
+            class="prayer-icon Fajr-icon"
+            src="icons/Fajr/23.png"
+            alt=""
+          />
         </div>
-    
-        <div class="cityDate-container">
-            <h1 id="cityName"></h1>
-            <h3 id="day"></h3>
-            <h3 class="date" id="gregorian"></h3>
-            <h3 class="date" id="hijri"></h3>
+        <div class="prayer">
+          <h2
+            class="prayer-time"
+            id="Sunrise"
+          >
+            00:00
+          </h2>
+          <h1 class="prayer-name">الشروق</h1>
+          <img
+            class="prayer-icon Sunrise-icon"
+            src="icons/sunrise/7.png"
+            alt=""
+          />
         </div>
-        
-        <div class="list">
-            <div class="citiesList">
-                <label for="cityInput">اختر المدينة:</label>
-                <input list="cityDataList" id="cityInput" name="cityInput">
-                <datalist id="cityDataList"></datalist>
-            </div>
-                    <div class="countriesList">
-                <label for="countryInput">اختر الدولة:</label>
-                <input list="countryDataList" id="countryInput" name="countryInput">
-                <datalist id="countryDataList"></datalist>
-            </div>
+        <div class="prayer">
+          <h2
+            class="prayer-time"
+            id="Dhuhr"
+          >
+            00:00
+          </h2>
+          <h1 class="prayer-name">الظهر</h1>
+          <img
+            class="prayer-icon Dhuhr-icon"
+            src="icons/Dhuhr/19.png"
+            alt=""
+          />
         </div>
-        <footer class="footer"></footer>
+        <div class="prayer">
+          <h2
+            class="prayer-time"
+            id="Asr"
+          >
+            00:00
+          </h2>
+          <h1 class="prayer-name">العصر</h1>
+          <img
+            class="prayer-icon Asr-icon"
+            src="icons/Asr/35.png"
+            alt=""
+          />
+        </div>
+        <div class="prayer">
+          <h2
+            class="prayer-time"
+            id="Maghrib"
+          >
+            00:00
+          </h2>
+          <h1 class="prayer-name">المغرب</h1>
+          <img
+            class="prayer-icon Maghrib-icon"
+            src="icons/Maghrib/5.png"
+            alt=""
+          />
+        </div>
+        <div class="prayer">
+          <h2
+            class="prayer-time"
+            id="Isha"
+          >
+            00:00
+          </h2>
+          <h1 class="prayer-name">العشاء</h1>
+          <img
+            class="prayer-icon Isha-icon"
+            src="icons/Isha/8.png"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div class="cityDate-container">
+        <h1 id="cityName"></h1>
+        <h3 id="day"></h3>
+        <h3
+          class="date"
+          id="gregorian"
+        ></h3>
+        <h3
+          class="date"
+          id="hijri"
+        ></h3>
+      </div>
+
+      <div class="list">
+        <div class="citiesList">
+          <label for="cityInput">اختر المدينة:</label>
+          <input
+            list="cityDataList"
+            id="cityInput"
+            name="cityInput"
+          />
+          <datalist id="cityDataList"></datalist>
+        </div>
+        <div class="countriesList">
+          <label for="countryInput">اختر الدولة:</label>
+          <input
+            list="countryDataList"
+            id="countryInput"
+            name="countryInput"
+          />
+          <datalist id="countryDataList"></datalist>
+        </div>
+      </div>
+      <div class="footer">
+        <footer class="footer-text"></footer>
+      </div>
     </div>
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
