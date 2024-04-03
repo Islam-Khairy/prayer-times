@@ -1501,8 +1501,29 @@ function fillCountries() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', function () {
   fillCountries();
+
+  setTimeout(() => {
+    const fajrIcon = document.querySelector('.Fajr-icon');
+    const sunriseIcon = document.querySelector('.Sunrise-icon');
+    const dhuhrIcon = document.querySelector('.Dhuhr-icon');
+    const asrIcon = document.querySelector('.Asr-icon');
+    const maghribIcon = document.querySelector('.Maghrib-icon');
+    const ishaIcon = document.querySelector('.Isha-icon');
+
+    fajrIcon.style.animation = 'translateAnimation 4s linear infinite';
+
+    sunriseIcon.style.animation = 'sunriseAnimation 8s ease-out infinite';
+
+    dhuhrIcon.style.animation = 'ScalingAnimation 6s alternate infinite';
+
+    asrIcon.style.animation = 'cloudySunAnimation 6s ease-in-out infinite';
+
+    maghribIcon.style.animation = 'sunsetAnimation 8s ease-in infinite';
+
+    ishaIcon.style.animation = 'translateAnimation 4s linear infinite';
+  }, 2000);
 });
 
 var typed = new Typed('.footer-text', {
