@@ -228,7 +228,7 @@ body {
 @-ms-keyframes sunriseAnimation {
   0%,
   100% {
-    -ms-transform: translateY(10px) scale(0.5) rotate(0deg);
+    -ms-transform: translateY(5px) scale(0.5) rotate(0deg);
     opacity: 0;
   }
   80% {
@@ -575,7 +575,7 @@ label {
 
   .footer {
     left: 0;
-    padding-left: 2.5rem;
+    padding-left: 2.6rem;
   }
 }
 
