@@ -90,46 +90,30 @@ body {
 }
 
 .Fajr-icon {
-  animation-delay: 0.4s;
   animation: translateAnimation 4s linear infinite;
 }
 
 .Sunrise-icon {
-  animation-delay: 0.6s;
   animation: sunriseAnimation 8s ease-out infinite;
 }
 
 .Dhuhr-icon {
-  animation-delay: 0.8s;
   animation: ScalingAnimation 6s alternate infinite;
 }
 
 .Asr-icon {
-  animation-delay: 1s;
-  animation: sunBehindCloudAnimation 6s ease-in-out infinite;
+  animation: cloudySunAnimation  6s ease-in-out infinite;
 }
 
 .Maghrib-icon {
-  animation-delay: 1.2s;
   animation: sunsetAnimation 8s ease-in infinite;
 }
 
 .Isha-icon {
-  animation-delay: 1.4s;
   animation: translateAnimation 4s linear infinite;
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
+/* translateAnimation */
 @keyframes translateAnimation {
   0% {
     transform: translateY(0);
@@ -142,18 +126,103 @@ body {
   }
 }
 
+@-webkit-keyframes translateAnimation {
+  0% {
+    -webkit-transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-5px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+  }
+}
+
+@-moz-keyframes translateAnimation {
+  0% {
+    -moz-transform: translateY(0);
+  }
+  50% {
+    -moz-transform: translateY(-5px);
+  }
+  100% {
+    -moz-transform: translateY(0);
+  }
+}
+
+@-ms-keyframes translateAnimation {
+  0% {
+    -ms-transform: translateY(0);
+  }
+  50% {
+    -ms-transform: translateY(-5px);
+  }
+  100% {
+    -ms-transform: translateY(0);
+  }
+}
+
+/* sunriseAnimation */
 @keyframes sunriseAnimation {
   0%,
   100% {
-    transform: translateY(10px) scale(0.5);
+    transform: translateY(10px) scale(0.5) rotate(0deg);
     opacity: 0;
   }
   80% {
-    transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1) rotate(90deg);
     opacity: 1;
   }
   95% {
-    transform: translateY(-5px) scale(1);
+    transform: translateY(-5px) scale(1) rotate(90deg);
+    opacity: 0.1;
+  }
+}
+
+@-webkit-keyframes sunriseAnimation {
+  0%,
+  100% {
+    -webkit-transform: translateY(10px) scale(0.5) rotate(0deg);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: translateY(0) scale(1) rotate(90deg);
+    opacity: 1;
+  }
+  95% {
+    -webkit-transform: translateY(-5px) scale(1) rotate(90deg);
+    opacity: 0.1;
+  }
+}
+
+@-moz-keyframes sunriseAnimation {
+  0%,
+  100% {
+    -moz-transform: translateY(10px) scale(0.5) rotate(0deg);
+    opacity: 0;
+  }
+  80% {
+    -moz-transform: translateY(0) scale(1) rotate(90deg);
+    opacity: 1;
+  }
+  95% {
+    -moz-transform: translateY(-5px) scale(1) rotate(90deg);
+    opacity: 0.1;
+  }
+}
+
+@-ms-keyframes sunriseAnimation {
+  0%,
+  100% {
+    -ms-transform: translateY(10px) scale(0.5) rotate(0deg);
+    opacity: 0;
+  }
+  80% {
+    -ms-transform: translateY(0) scale(1) rotate(90deg);
+    opacity: 1;
+  }
+  95% {
+    -ms-transform: translateY(-5px) scale(1) rotate(90deg);
     opacity: 0.1;
   }
 }
@@ -161,14 +230,44 @@ body {
 @keyframes ScalingAnimation {
   0%,
   100% {
-    transform: scale(1);
+    transform: scale(0.9);
   }
   50% {
     transform: scale(1.2);
   }
 }
 
-@keyframes sunBehindCloudAnimation {
+@-webkit-keyframes ScalingAnimation {
+  0%,
+  100% {
+    -webkit-transform: scale(0.9);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+  }
+}
+
+@-moz-keyframes ScalingAnimation {
+  0%,
+  100% {
+    -moz-transform: scale(0.9);
+  }
+  50% {
+    -moz-transform: scale(1.2);
+  }
+}
+
+@-ms-keyframes ScalingAnimation {
+  0%,
+  100% {
+    -ms-transform: scale(0.9);
+  }
+  50% {
+    -ms-transform: scale(1.2);
+  }
+}
+
+@keyframes cloudySunAnimation  {
   0%,
   100% {
     opacity: 1;
@@ -184,6 +283,55 @@ body {
   }
 }
 
+@-webkit-keyframes cloudySunAnimation  {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.4;
+  }
+  95% {
+    opacity: 0.8;
+  }
+}
+
+@-moz-keyframes cloudySunAnimation  {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.4;
+  }
+  95% {
+    opacity: 0.8;
+  }
+}
+
+@-ms-keyframes cloudySunAnimation  {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.4;
+  }
+  95% {
+    opacity: 0.8;
+  }
+}
+
+/* sunsetAnimation */
 @keyframes sunsetAnimation {
   0%,
   100% {
@@ -201,6 +349,61 @@ body {
     opacity: 0.5;
   }
 }
+
+@-webkit-keyframes sunsetAnimation {
+  0%,
+  100% {
+    -webkit-transform: translateY(-5px) scale(1);
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: translateY(5px) scale(0.8);
+    opacity: 0;
+  }
+  95% {
+    opacity: 0.1;
+  }
+  98% {
+    opacity: 0.5;
+  }
+}
+
+@-moz-keyframes sunsetAnimation {
+  0%,
+  100% {
+    -moz-transform: translateY(-5px) scale(1);
+    opacity: 1;
+  }
+  80% {
+    -moz-transform: translateY(5px) scale(0.8);
+    opacity: 0;
+  }
+  95% {
+    opacity: 0.1;
+  }
+  98% {
+    opacity: 0.5;
+  }
+}
+
+@-ms-keyframes sunsetAnimation {
+  0%,
+  100% {
+    -ms-transform: translateY(-5px) scale(1);
+    opacity: 1;
+  }
+  80% {
+    -ms-transform: translateY(5px) scale(0.7);
+    opacity: 0;
+  }
+  95% {
+    opacity: 0.1;
+  }
+  98% {
+    opacity: 0.5;
+  }
+}
+
 
 .cityDate-container {
   font-family: ruwudu;
@@ -358,10 +561,9 @@ label {
     left: 0;
   }
 
-  
   .footer {
     left: 0;
-    padding-left: 2.2rem;
+    padding-left: 2.4rem;
   }
 }
 
