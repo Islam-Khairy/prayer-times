@@ -1503,10 +1503,13 @@ function fillCountries() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  setTimeout(() => {
-    document.querySelector('.Sunrise-icon').classList.add('show-sunrise');
-  }, 1500);
   fillCountries();
+});
+
+window.addEventListener('load', function () {
+  setTimeout( () => {
+    document.querySelector('.Sunrise-icon').style.visibility = 'visible';
+  }, 1000);
 });
 
 var typed = new Typed('.footer-text', {
