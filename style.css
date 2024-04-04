@@ -100,10 +100,6 @@ body {
   will-change: transform;
 }
 
-.show-sunrise {
-  visibility: visible;
-}
-
 .Dhuhr-icon {
   animation: ScalingAnimation 6s alternate infinite;
   animation-delay: 0.8s;
@@ -195,7 +191,7 @@ body {
     transform: translateY(-5px) scale(1) rotate(90deg);
     opacity: 0.1;
   }
-} 
+}
 
 @-webkit-keyframes sunriseAnimation {
   0%,
