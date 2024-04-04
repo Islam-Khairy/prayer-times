@@ -35,6 +35,7 @@ let countries = [
       { cityName: 'بورسعيد', enCityName: 'Port Said' },
       { cityName: 'شمال سيناء', enCityName: 'Shamal Sina' },
       { cityName: 'جنوب سيناء', enCityName: 'South Sinai' },
+      { cityName: 'البحر الأحمر', enCityName: 'Red Sea' },
     ],
   },
   {
@@ -1503,6 +1504,9 @@ function fillCountries() {
 
 document.addEventListener('DOMContentLoaded', () => {
   fillCountries();
+  setTimeout(() => {
+    document.querySelector('.Sunrise-icon').classList.add('show-sunrise');
+  }, 1000);
 });
 
 var typed = new Typed('.footer-text', {
