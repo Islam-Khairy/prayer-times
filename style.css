@@ -1,8 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ruwudu:wght@400;500;600;700&family=Scheherazade+New:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Caveat:wght@400..700&family=Courgette&family=Dancing+Script:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Edu+NSW+ACT+Foundation:wght@400..700&family=Galada&family=Imbue:opsz,wght@10..100,100..900&family=Kalam:wght@300;400;700&family=Kaushan+Script&family=Merienda:wght@300..900&family=Namdhinggo:wght@400;500;600;700;800&family=Noto+Serif+JP&family=Oleo+Script:wght@400;700&family=PT+Sans+Narrow:wght@400;700&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-
 * {
   padding: 0;
   margin: 0;
@@ -20,9 +15,10 @@ html {
 }
 
 body {
-  font-family: 'Reem Kufi', 'Ruwudu', sans-serif;
-  background: url('background/mosque4.jpg') center/cover no-repeat;
   position: relative;
+  font-family: 'Reem Kufi', 'Ruwudu', sans-serif;
+  background: url('background/mosque1.jpg') center/cover no-repeat;
+  transition: background-image 0.5s ease;
 }
 
 .container {
@@ -141,42 +137,6 @@ body {
   }
 }
 
-@-webkit-keyframes translateAnimation {
-  0% {
-    -webkit-transform: translateY(0);
-  }
-  50% {
-    -webkit-transform: translateY(-5px);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-  }
-}
-
-@-moz-keyframes translateAnimation {
-  0% {
-    -moz-transform: translateY(0);
-  }
-  50% {
-    -moz-transform: translateY(-5px);
-  }
-  100% {
-    -moz-transform: translateY(0);
-  }
-}
-
-@-ms-keyframes translateAnimation {
-  0% {
-    -ms-transform: translateY(0);
-  }
-  50% {
-    -ms-transform: translateY(-5px);
-  }
-  100% {
-    -ms-transform: translateY(0);
-  }
-}
-
 @keyframes sunriseAnimation {
   0%,
   100% {
@@ -193,54 +153,6 @@ body {
   }
 }
 
-@-webkit-keyframes sunriseAnimation {
-  0%,
-  100% {
-    -webkit-transform: translateY(10px) scale(0.5) rotate(0deg);
-    opacity: 0;
-  }
-  80% {
-    -webkit-transform: translateY(0) scale(1) rotate(90deg);
-    opacity: 1;
-  }
-  95% {
-    -webkit-transform: translateY(-5px) scale(1) rotate(90deg);
-    opacity: 0.1;
-  }
-}
-
-@-moz-keyframes sunriseAnimation {
-  0%,
-  100% {
-    -moz-transform: translateY(10px) scale(0.5) rotate(0deg);
-    opacity: 0;
-  }
-  80% {
-    -moz-transform: translateY(0) scale(1) rotate(90deg);
-    opacity: 1;
-  }
-  95% {
-    -moz-transform: translateY(-5px) scale(1) rotate(90deg);
-    opacity: 0.1;
-  }
-}
-
-@-ms-keyframes sunriseAnimation {
-  0%,
-  100% {
-    -ms-transform: translateY(10px) scale(0.5) rotate(0deg);
-    opacity: 0;
-  }
-  80% {
-    -ms-transform: translateY(0) scale(1) rotate(90deg);
-    opacity: 1;
-  }
-  95% {
-    -ms-transform: translateY(-5px) scale(1) rotate(90deg);
-    opacity: 0.1;
-  }
-}
-
 @keyframes ScalingAnimation {
   0%,
   100% {
@@ -251,85 +163,7 @@ body {
   }
 }
 
-@-webkit-keyframes ScalingAnimation {
-  0%,
-  100% {
-    -webkit-transform: scale(0.9);
-  }
-  50% {
-    -webkit-transform: scale(1.2);
-  }
-}
-
-@-moz-keyframes ScalingAnimation {
-  0%,
-  100% {
-    -moz-transform: scale(0.9);
-  }
-  50% {
-    -moz-transform: scale(1.2);
-  }
-}
-
-@-ms-keyframes ScalingAnimation {
-  0%,
-  100% {
-    -ms-transform: scale(0.9);
-  }
-  50% {
-    -ms-transform: scale(1.2);
-  }
-}
-
 @keyframes cloudySunAnimation {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.7;
-  }
-  80% {
-    opacity: 0.4;
-  }
-  95% {
-    opacity: 0.8;
-  }
-}
-
-@-webkit-keyframes cloudySunAnimation {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.7;
-  }
-  80% {
-    opacity: 0.4;
-  }
-  95% {
-    opacity: 0.8;
-  }
-}
-
-@-moz-keyframes cloudySunAnimation {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.7;
-  }
-  80% {
-    opacity: 0.4;
-  }
-  95% {
-    opacity: 0.8;
-  }
-}
-
-@-ms-keyframes cloudySunAnimation {
   0%,
   100% {
     opacity: 1;
@@ -353,60 +187,6 @@ body {
   }
   80% {
     transform: translateY(5px) scale(0.6);
-    opacity: 0;
-  }
-  95% {
-    opacity: 0.1;
-  }
-  98% {
-    opacity: 0.5;
-  }
-}
-
-@-webkit-keyframes sunsetAnimation {
-  0%,
-  100% {
-    -webkit-transform: translateY(0) scale(1);
-    opacity: 1;
-  }
-  80% {
-    -webkit-transform: translateY(5px) scale(0.6);
-    opacity: 0;
-  }
-  95% {
-    opacity: 0.1;
-  }
-  98% {
-    opacity: 0.5;
-  }
-}
-
-@-moz-keyframes sunsetAnimation {
-  0%,
-  100% {
-    -moz-transform: translateY(0) scale(1);
-    opacity: 1;
-  }
-  80% {
-    -moz-transform: translateY(0) scale(0.6);
-    opacity: 0;
-  }
-  95% {
-    opacity: 0.1;
-  }
-  98% {
-    opacity: 0.5;
-  }
-}
-
-@-ms-keyframes sunsetAnimation {
-  0%,
-  100% {
-    -ms-transform: translateY(0) scale(1);
-    opacity: 1;
-  }
-  80% {
-    -ms-transform: translateY(5px) scale(0.6);
     opacity: 0;
   }
   95% {
@@ -529,6 +309,114 @@ label {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Amiri';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Amiri/Amiri-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Amiri';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/Amiri/Amiri-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Amiri';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/Amiri/Amiri-Bold.ttf') format('ttf'),
+    url('../fonts/Amiri/Amiri-Bold.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Amiri';
+  font-style: italic;
+  font-weight: 700;
+  src: url('../fonts/Amiri/Amiri-BoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Courgette';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Courgette/Courgette-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Courgette';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: expanded;
+  src: url('../fonts/Courgette/Courgette-Regular-48.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Courgette';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: expanded;
+  src: url('../fonts/Courgette/Courgette-Regular-36.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Ruwudu';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Ruwudu/Ruwudu-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Ruwudu';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/Ruwudu/Ruwudu-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Ruwudu';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/Ruwudu/Ruwudu-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Ruwudu';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/Ruwudu/Ruwudu-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Reem Kufi';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Reem_Kufi/static/ReemKufi-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Reem Kufi';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/Reem_Kufi/static/ReemKufi-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Reem Kufi';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/Reem_Kufi/static/ReemKufi-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Reem Kufi';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/Reem_Kufi/static/ReemKufi-Bold.ttf') format('truetype');
+}
+
 @media (max-width: 1024px) {
   html {
     font-size: 56.25%;
@@ -579,35 +467,25 @@ label {
   }
 }
 
-@media (min-width: 540px) and (max-width: 575.98px) {
+@media (max-width: 540px) {
   html {
     font-size: 43.75%;
   }
 
   .prayer-times-container {
-    top: -5rem;
-    left: 2rem;
+    top: 0;
+    left: 0rem;
   }
 
   .cityDate-container {
-    top: -6rem;
+    top: -2rem;
     left: 2rem;
   }
 }
 
-@media (max-width: 450px) {
-  html {
-    font-size: 43.75%;
-  }
-
-  .prayer-times-container {
-    top: -8rem;
-    left: -2rem;
-  }
-
+@media (max-width: 440px) {
   .cityDate-container {
-    top: -10rem;
-    left: 2rem;
+    left: 4rem;
   }
 
   label {
