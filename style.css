@@ -508,16 +508,6 @@ label {
   }
 }
 
-@media (max-width: 375px) {
-  .prayer-times-container {
-    top: 0;
-  }
-
-  .cityDate-container {
-    top: -2rem;
-  }
-}
-
 @media (max-width: 320px) {
   html {
     font-size: 28%;
