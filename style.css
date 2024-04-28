@@ -327,8 +327,7 @@ label {
   font-family: 'Amiri';
   font-style: normal;
   font-weight: 700;
-  src: url('./fonts/Amiri/Amiri-Bold.ttf') format('ttf'),
-    url('./fonts/Amiri/Amiri-Bold.ttf') format('ttf');
+  src: url('./fonts/Amiri/Amiri-Bold.ttf') format('ttf');
 }
 
 @font-face {
