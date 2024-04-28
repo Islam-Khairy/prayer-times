@@ -313,36 +313,36 @@ label {
   font-family: 'Amiri';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/Amiri/Amiri-Regular.ttf') format('truetype');
+  src: url('./fonts/Amiri/Amiri-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Amiri';
   font-style: italic;
   font-weight: 400;
-  src: url('../fonts/Amiri/Amiri-Italic.ttf') format('truetype');
+  src: url('./fonts/Amiri/Amiri-Italic.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Amiri';
   font-style: normal;
   font-weight: 700;
-  src: url('../fonts/Amiri/Amiri-Bold.ttf') format('ttf'),
-    url('../fonts/Amiri/Amiri-Bold.ttf') format('ttf');
+  src: url('./fonts/Amiri/Amiri-Bold.ttf') format('ttf'),
+    url('./fonts/Amiri/Amiri-Bold.ttf') format('ttf');
 }
 
 @font-face {
   font-family: 'Amiri';
   font-style: italic;
   font-weight: 700;
-  src: url('../fonts/Amiri/Amiri-BoldItalic.ttf') format('truetype');
+  src: url('./fonts/Amiri/Amiri-BoldItalic.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Courgette';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/Courgette/Courgette-Regular.ttf') format('truetype');
+  src: url('./fonts/Courgette/Courgette-Regular.ttf') format('truetype');
 }
 
 @font-face {
@@ -350,7 +350,7 @@ label {
   font-style: normal;
   font-weight: 400;
   font-stretch: expanded;
-  src: url('../fonts/Courgette/Courgette-Regular-48.ttf') format('truetype');
+  src: url('./fonts/Courgette/Courgette-Regular-48.ttf') format('truetype');
 }
 
 @font-face {
@@ -358,63 +358,63 @@ label {
   font-style: normal;
   font-weight: 400;
   font-stretch: expanded;
-  src: url('../fonts/Courgette/Courgette-Regular-36.ttf') format('truetype');
+  src: url('./fonts/Courgette/Courgette-Regular-36.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Ruwudu';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/Ruwudu/Ruwudu-Regular.ttf') format('truetype');
+  src: url('./fonts/Ruwudu/Ruwudu-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Ruwudu';
   font-style: normal;
   font-weight: 500;
-  src: url('../fonts/Ruwudu/Ruwudu-Medium.ttf') format('truetype');
+  src: url('./fonts/Ruwudu/Ruwudu-Medium.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Ruwudu';
   font-style: normal;
   font-weight: 600;
-  src: url('../fonts/Ruwudu/Ruwudu-SemiBold.ttf') format('truetype');
+  src: url('./fonts/Ruwudu/Ruwudu-SemiBold.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Ruwudu';
   font-style: normal;
   font-weight: 700;
-  src: url('../fonts/Ruwudu/Ruwudu-Bold.ttf') format('truetype');
+  src: url('./fonts/Ruwudu/Ruwudu-Bold.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Reem Kufi';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/Reem_Kufi/static/ReemKufi-Regular.ttf') format('truetype');
+  src: url('./fonts/Reem_Kufi/static/ReemKufi-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Reem Kufi';
   font-style: normal;
   font-weight: 500;
-  src: url('../fonts/Reem_Kufi/static/ReemKufi-Medium.ttf') format('truetype');
+  src: url('./fonts/Reem_Kufi/static/ReemKufi-Medium.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Reem Kufi';
   font-style: normal;
   font-weight: 600;
-  src: url('../fonts/Reem_Kufi/static/ReemKufi-SemiBold.ttf') format('truetype');
+  src: url('./fonts/Reem_Kufi/static/ReemKufi-SemiBold.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Reem Kufi';
   font-style: normal;
   font-weight: 700;
-  src: url('../fonts/Reem_Kufi/static/ReemKufi-Bold.ttf') format('truetype');
+  src: url('./fonts/Reem_Kufi/static/ReemKufi-Bold.ttf') format('truetype');
 }
 
 @media (max-width: 1024px) {
@@ -467,25 +467,35 @@ label {
   }
 }
 
-@media (max-width: 540px) {
+@media (min-width: 540px) and (max-width: 575.98px) {
   html {
     font-size: 43.75%;
   }
 
   .prayer-times-container {
-    top: 0;
-    left: 0rem;
+    top: -5rem;
+    left: 2rem;
   }
 
   .cityDate-container {
-    top: -2rem;
+    top: -6rem;
     left: 2rem;
   }
 }
 
 @media (max-width: 440px) {
+  html {
+    font-size: 43.75%;
+  }
+
+  .prayer-times-container {
+    top: -8rem;
+    left: -2rem;
+  }
+
   .cityDate-container {
-    left: 4rem;
+    top: -10rem;
+    left: 2rem;
   }
 
   label {
@@ -496,6 +506,16 @@ label {
 @media (max-width: 390px) {
   html {
     font-size: 37.5%;
+  }
+}
+
+@media (max-width: 375px) {
+  .prayer-times-container {
+    top: 0;
+  }
+
+  .cityDate-container {
+    top: -2rem;
   }
 }
 
