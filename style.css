@@ -17,8 +17,8 @@ html {
 body {
   position: relative;
   font-family: 'Reem Kufi', 'Ruwudu', sans-serif;
-  background: url('background/mosque1.jpg') center/cover no-repeat;
-  transition: background-image 0.5s ease;
+  background: url('backgrounds/mosque1.jpg') center/cover no-repeat;
+  transition: background-image 1s ease;
 }
 
 .container {
@@ -327,7 +327,7 @@ label {
   font-family: 'Amiri';
   font-style: normal;
   font-weight: 700;
-  src: url('./fonts/Amiri/Amiri-Bold.ttf') format('ttf');
+  src: url('./fonts/Amiri/Amiri-Bold.ttf') format('truetype');
 }
 
 @font-face {

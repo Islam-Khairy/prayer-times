@@ -1266,25 +1266,21 @@ const monthsArabicNames = {
 };
 
 const backgroundImages = [
-  'url(background/mosque1.jpg)',
-  'url(background/mosque2.jpg)',
-  'url(background/mosque3.jpg)',
-  'url(background/mosque4.jpg)',
-  'url(background/mosque5.jpg)',
-  'url(background/mosque6.jpg)',
-  'url(background/mosque7.jpg)',
-  'url(background/mosque8.jpg)',
-  'url(background/mosque9.jpg)',
-  'url(background/mosque10.jpg)',
-  'url(background/mosque11.jpg)',
-  'url(background/mosque12.jpg)',
-  'url(background/mosque13.jpg)',
-  'url(background/mosque14.jpg)',
-  'url(background/mosque15.jpg)',
-  'url(background/mosque16.jpg)',
+  'url(backgrounds/mosque1.jpg)',
+  'url(backgrounds/mosque2.jpg)',
+  'url(backgrounds/mosque3.jpg)',
+  'url(backgrounds/mosque4.jpg)',
+  'url(backgrounds/mosque5.jpg)',
+  'url(backgrounds/mosque6.jpg)',
+  'url(backgrounds/mosque7.jpg)',
+  'url(backgrounds/mosque8.jpg)',
+  'url(backgrounds/mosque9.jpg)',
+  'url(backgrounds/mosque10.jpg)',
+  'url(backgrounds/mosque11.jpg)',
 ];
 
-const smallScreensBackgroundImages = backgroundImages.slice(0, 11);
+const smallScreensBackgroundImages = backgroundImages.slice(0, 7);
+smallScreensBackgroundImages.push('url(backgrounds/mosque12.jpg)');
 let backgroundIndex = 0;
 
 function changeBackground() {
@@ -1296,7 +1292,7 @@ function changeBackground() {
 
 changeBackground();
 
-setInterval(changeBackground, 20000);
+setInterval(changeBackground, 30000);
 
 const backgroundUrls = backgroundImages.map((url) => {
   return url.slice(4, -1);
@@ -1550,6 +1546,16 @@ function fillCountries() {
 
 document.addEventListener('DOMContentLoaded', () => {
   fillCountries();
+  const body = document.querySelector('body');
+  const backgroundImageUrl = 'backgrounds/mosque1.jpg';
+  const lazyLoadBackgroundImage = (url) => {
+    const img = new Image();
+    img.src = url;
+    img.onload = () => {
+      body.style.backgroundImage = `url(${url})`;
+    };
+  };
+  lazyLoadBackgroundImage(backgroundImageUrl);
 });
 
 window.addEventListener('load', function () {
