@@ -265,6 +265,8 @@ label {
   background: transparent;
   text-align: center;
   padding: 0.3rem;
+  color: #bbbbbb;
+  /* colors: #bbbbbb #aaaaaa #999999 #888888 #777777; #dddddd */
 }
 
 .error-message {

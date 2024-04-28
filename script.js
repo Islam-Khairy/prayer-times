@@ -1482,7 +1482,7 @@ function fillCities(cityArr, enCountryName) {
     if (selectedCity) {
       if (enCountryName) {
         handleCitySelection(selectedCity, enCountryName);
-      }
+      }      
     }
   });
 
