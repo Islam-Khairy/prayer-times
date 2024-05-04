@@ -1553,6 +1553,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 window.addEventListener('load', function () {
+  const countriesList = document.getElementById('countryDataList');
+  countriesList.value = '';
+  citiesList.value = '';
   setTimeout(() => {
     document.querySelector('.Sunrise-icon').style.visibility = 'visible';
   }, 1000);
