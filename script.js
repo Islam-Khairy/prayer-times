@@ -1550,6 +1550,15 @@ function fillCountries() {
 
 document.addEventListener('DOMContentLoaded', () => {
   fillCountries();
+  const body = document.querySelector('body');  
+  const lazyLoadBackgroundImage = (url) => {
+    const img = new Image();
+    img.src = url;
+    img.onload = () => {
+      body.style.backgroundImage = `url(${url})`;
+    };
+  };
+  lazyLoadBackgroundImage(allBackgroundUrls);
 });
 
 window.addEventListener('load', function () {
