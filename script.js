@@ -1276,11 +1276,10 @@ const backgroundImages = [
   'url(backgrounds/mosque8.jpg)',
   'url(backgrounds/mosque9.jpg)',
   'url(backgrounds/mosque10.jpg)',
-  'url(backgrounds/mosque11.jpg)',
 ];
 
-const smallScreensBackgroundImages = backgroundImages.slice(0, 7);
-smallScreensBackgroundImages.push('url(backgrounds/mosque12.jpg)');
+const smallScreensBackgroundImages = backgroundImages.slice(0, 6);
+smallScreensBackgroundImages.push('url(backgrounds/mosque11.jpg)');
 let backgroundIndex = 0;
 
 function changeBackground() {
@@ -1298,6 +1297,10 @@ const backgroundUrls = backgroundImages.map((url) => {
   return url.slice(4, -1);
 });
 
+const allBackgroundUrls = [...backgroundImages, ...smallScreensBackgroundImages].map((url) => {
+  return url.slice(4, -1);
+});
+
 function preloadImages(urls) {
   urls.forEach((url) => {
     const img = new Image();
@@ -1305,7 +1308,7 @@ function preloadImages(urls) {
   });
 }
 
-preloadImages(backgroundUrls);
+preloadImages(allBackgroundUrls);
 
 function handlePrayerTimesData(data, selectedCity) {
   try {
@@ -1337,7 +1340,7 @@ function handlePrayerTimesError(error) {
   let errorMessage = '.مواقيت الصلاة غير متوفرة لهذه المنطقة';
 
   if (error.message.includes('Failed to fetch') || error.code === 404) {
-    errorMessage = 'يرجى التحقق من اتصالك بالإنترنت أو العنوان غير موجود';
+    errorMessage = 'يرجى التحقق من اتصالك بالإنترنت وإعادة المحاولة';
   } else if (error.message.includes('Timeout')) {
     errorMessage = 'انتهى الوقت المحدد للإستجابة، يُرجى إعادة المحاولة';
   }
@@ -1443,6 +1446,7 @@ function handleCitySelection(selectedCity, enCountryName) {
     fetchPrayerTimesFromAPI(selectedCity.enCityName, enCountryName)
       .then((data) => {
         handlePrayerTimesData(data, selectedCity);
+        cityInput.blur();
       })
       .catch((error) => {
         handlePrayerTimesError(error);
@@ -1482,7 +1486,7 @@ function fillCities(cityArr, enCountryName) {
     if (selectedCity) {
       if (enCountryName) {
         handleCitySelection(selectedCity, enCountryName);
-      }      
+      }
     }
   });
 
@@ -1546,16 +1550,6 @@ function fillCountries() {
 
 document.addEventListener('DOMContentLoaded', () => {
   fillCountries();
-  const body = document.querySelector('body');
-  const backgroundImageUrl = 'backgrounds/mosque1.jpg';
-  const lazyLoadBackgroundImage = (url) => {
-    const img = new Image();
-    img.src = url;
-    img.onload = () => {
-      body.style.backgroundImage = `url(${url})`;
-    };
-  };
-  lazyLoadBackgroundImage(backgroundImageUrl);
 });
 
 window.addEventListener('load', function () {
