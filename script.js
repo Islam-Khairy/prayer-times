@@ -1,4 +1,5 @@
 let cityNameText = document.getElementById('cityName');
+let countriesList = document.getElementById('countryDataList');
 let citiesList = document.getElementById('cityDataList');
 let spinner = document.getElementById('spinner');
 let lastExistCity = '';
@@ -1498,9 +1499,8 @@ function fillCities(cityArr, enCountryName) {
 }
 
 function fillCountries() {
-  const countriesList = document.getElementById('countryDataList');
+  
   const countryInput = document.getElementById('countryInput');
-
   countries.forEach((countryObject) => {
     const countryOption = document.createElement('option');
     let countryName = countryObject.country.countryName;
@@ -1548,17 +1548,13 @@ function fillCountries() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  fillCountries();
-});
-
-window.addEventListener('load', function () {
-  const countriesList = document.getElementById('countryDataList');
-  countriesList.value = '';
-  citiesList.value = '';
+window.addEventListener('load', function () {  
   setTimeout(() => {
     document.querySelector('.Sunrise-icon').style.visibility = 'visible';
   }, 1000);
+  countriesList.innerHTML = '';
+  citiesList.innerHTML = '';
+  fillCountries();
 });
 
 var typed = new Typed('.footer-text', {
