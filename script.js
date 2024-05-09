@@ -1279,7 +1279,7 @@ const backgroundImages = [
   'url(backgrounds/mosque10.jpg)',
 ];
 
-const smallScreensBackgroundImages = backgroundImages.slice(0, 6);
+const smallScreensBackgroundImages = backgroundImages.slice(0, 3);
 smallScreensBackgroundImages.push('url(backgrounds/mosque11.jpg)');
 let backgroundIndex = 0;
 
@@ -1548,7 +1548,7 @@ function fillCountries() {
   });
 }
 
-window.addEventListener('load', function () {  
+window.addEventListener('DOMContentLoaded', function () {  
   setTimeout(() => {
     document.querySelector('.Sunrise-icon').style.visibility = 'visible';
   }, 1000);
