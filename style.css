@@ -347,22 +347,6 @@ label {
 }
 
 @font-face {
-  font-family: 'Courgette';
-  font-style: normal;
-  font-weight: 400;
-  font-stretch: expanded;
-  src: url('./fonts/Courgette/Courgette-Regular-48.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Courgette';
-  font-style: normal;
-  font-weight: 400;
-  font-stretch: expanded;
-  src: url('./fonts/Courgette/Courgette-Regular-36.ttf') format('truetype');
-}
-
-@font-face {
   font-family: 'Ruwudu';
   font-style: normal;
   font-weight: 400;
